@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mhs</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+  <!-- Top orange bar -->
+  <div class="top-bar">
+    <div class="left-links">
+      <!-- <a href="#">Personal</a>
+      <a href="#">Enterprise</a> -->
+    </div>
+    <div class="right-links">
+      <input type="text" placeholder="Search..." class="search-input" />
+      <select class="lang-select">
+        <option>English</option>
+        <option>Swahili</option>
+      </select>
+      <!-- <a href="#" class="login">Login</a> -->
+    </div>
+  </div>
+
+  <!-- White nav bar -->
+<nav class="navbar">
+  <div class="nav-logo">
+    <img src="images/mhs-logo.png" class="logo-image" alt="Mhs Logo" />
+  </div>
+
+  <!-- Close button OUTSIDE the ul -->
+  <!-- <button id="menu-close-button" class="fas fa-times"></button> -->
+
+<ul class="nav-menu">
+  <li class="nav-item"><a href="#" data-target="home" class="nav-link active">Home</a></li>
+  <li class="nav-item"><a href="#" data-target="about" class="nav-link">About Us</a></li>
+  <li class="nav-item"><a href="#" data-target="service" class="nav-link">Services</a></li>
+  <!-- <li class="nav-item"><a href="#" data-target="event" class="nav-link">Portfolio</a></li> -->
+  <li class="nav-item"><a href="#" data-target="partner" class="nav-link">Clients</a></li>
+  <li class="nav-item"><a href="#" data-target="contact" class="nav-link">Contacts</a></li>
+</ul>
+
+  <!-- <button id="menu-open-button" class="fas fa-bars"></button> -->
+</nav>
+  
+</header>
+
+ <main>
+
+<!-- Hero Section -->
+<section class="hero-section" id="home">
+  <!-- Background image -->
+  <div class="hero-bg" style="background-image: url('images/hero-image.jpg');"></div>
+  
+  <!-- Overlay -->
+  <div class="overlay"></div>
+
+  <div class="container hero-content text-center">
+    <h2 class="hero-title">Welcome to <span class="highlight">Our Company</span></h2>
+    <h3 class="subtitle">
+      Start Your <span class="white-text">Beautiful</span> 
+      And <span class="highlight">Bright Future </span>
+    </h3>
+    <p class="description">
+      We empower individuals and businesses to thrive by delivering expert business
+      management, statistics, and consulting services tailored to your unique needs.
+    </p>
+    <div class="buttons mt-4">
+      <a href="#partner" class="btn btn-gold">Explore Our Services</a>
+      <a href="#contact" class="btn btn-outline-light">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- ================= About Us Section ================= -->
+<section class="about-us section" id="about">
+  <!-- Background image with overlay -->
+  <div class="about-bg"></div>
+  <div class="overlay"></div>
+
+  <div class="about-container">
+    <!-- Left Side: About Text -->
+    <div class="about-left">
+      <span class="section-line"></span>
+      <h2>Who We Are</h2>
+      <p>
+        MHS Consults is a dynamic business management and statistics agency 
+        dedicated to helping you turn ideas into reality, navigate complex 
+        business challenges, and achieve sustainable growth. 
+      </p>
+      <p>
+        Our vibrant team of young, professional, and creative experts works closely with you 
+        to keep your business in shape and ahead of the curve. We let you focus on 
+        expanding your business while we handle the strategy, compliance, and 
+        operational support.
+      </p>
+      <a href="#" class="btn-learn-more">Learn More About Us</a>
+    </div>
+
+    <!-- Right Side: Team Image -->
+    <div class="about-right">
+    <div class="team-photo-frame">
+      <img src="images/team.jpg" alt="Our Team" class="team-photo">
+    </div>
+
+
+  </div>
+
+  <!-- Mission, Vision, Values -->
+  <div class="about-extra">
+    <div class="extra-box">
+      <i class="fas fa-bullseye"></i>
+      <h3>Our Mission</h3>
+      <p>
+        To empower individuals and businesses with tailored strategies, 
+        reliable data insights, and sustainable growth solutions.
+      </p>
+    </div>
+
+    <div class="extra-box">
+      <i class="fas fa-lightbulb"></i>
+      <h3>Our Vision</h3>
+      <p>
+        To be the leading consulting partner that drives innovation and 
+        long-term success for businesses across Africa.
+      </p>
+    </div>
+
+    <div class="extra-box">
+      <i class="fas fa-handshake"></i>
+      <h3>Our Values</h3>
+      <p>
+        Professionalism, creativity, integrity, and client-centered 
+        service in everything we do.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Team Section ================= -->
+<section class="team-section section" id="team">
+  <div class="container">
+    <h2 class="team-title">Our Team</h2>
+    <p class="team-subtitle">“People forget years and remember moments”</p>
+
+    <!-- Executive Team -->
+    <h3 class="team-heading">Executive Team</h3>
+    <div class="team-grid executive-team">
+      <div class="team-card executive-card">
+        <img src="images/shadrack.png" alt="Founder">
+        <h4>Maganga Shimbi</h4>
+        <p>Founder & CEO</p>
+      </div>
+
+      <div class="team-card executive-card">
+        <img src="images/shadrack.png" alt="COO">
+        <h4>Pendo Werande Munisi</h4>
+        <p>Chief Operations Officer</p>
+      </div>
+
+      <div class="team-card executive-card">
+        <img src="images/shadrack.png" alt="CMO">
+        <h4>Lutufyo Francis</h4>
+        <p>Chief Marketing Officer</p>
+      </div>
+
+      <div class="team-card executive-card">
+        <img src="images/shadrack.png" alt="CFO">
+        <h4>Haji Suleiman Fikiri</h4>
+        <p>Chief Finance Officer</p>
+      </div>
+    </div>
+
+    <!-- All Team Slider -->
+    <h3 class="team-heading">All Team Members</h3>
+    <div class="swiper team-slider">
+      <div class="swiper-wrapper">
+
+       <div class="swiper-slide team-card member-card">
+  <img src="images/shadrack.png" alt="Shadrack Leonard">
+  <h4>Shadrack Leonard</h4>
+  <p class="role">Web Developer</p>
+</div>
+
+<div class="swiper-slide team-card member-card">
+  <img src="images/shadrack.png" alt="Tareck Adam">
+  <h4>Tareck Adam</h4>
+  <p class="role">Graphic Designer</p>
+</div>
+
+<div class="swiper-slide team-card member-card">
+  <img src="images/shadrack.png" alt="David Richard Malecela">
+  <h4>David Richard Malecela</h4>
+  <p class="role">ICT & Communications</p>
+</div>
+
+<div class="swiper-slide team-card member-card">
+  <img src="images/shadrack.png" alt="Immaculata Tungaraza">
+  <h4>Immaculata Tungaraza</h4>
+  <p class="role">Tax & Accounting Officer</p>
+</div>
+
+<div class="swiper-slide team-card member-card">
+  <img src="images/shadrack.png" alt="Amida Jumanne Bakeza">
+  <h4>Amida Jumanne Bakeza</h4>
+  <p class="role">Registration & Compliance</p>
+</div>
+
+<div class="swiper-slide team-card member-card">
+  <img src="images/shadrack.png" alt="Mikidadi Mbaruku Bakari">
+  <h4>Mikidadi Mbaruku Bakari</h4>
+  <p class="role">Social Media Content Creator</p>
+</div>
+
+<div class="swiper-slide team-card member-card">
+  <img src="images/shadrack.png" alt="Josephine Leonard Masinjisa">
+  <h4>Josephine Leonard Masinjisa</h4>
+  <p class="role">Secretary</p>
+</div>
+
+      </div>
+
+      <!-- Slider navigation -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SwiperJS Init -->
+<script>
+  const swiper = new Swiper('.team-slider', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 20000, // 20 seconds auto-slide
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      0: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 }
+    }
+  });
+</script>
+
+<section class="services-alt section" id="service">
+  <!-- Section Header -->
+  <div class="services-header">
+    <div class="overlay">
+      <h5>Our Services</h5>
+      <h1>What We Do</h1>
+      <p><a href="#">Home</a> / Our Services</p>
+    </div>
+  </div>
+
+  
+  <div class="services-intro">
+    <h2>Solutions That Drive Growth</h2>
+    <div class="intro-divider"></div>
+    <p>
+      At <strong>MHS Consults</strong>, we don’t just provide services — we solve problems and 
+      create opportunities. From finances and compliance to digital growth and branding, 
+      our team is committed to helping businesses operate efficiently, stay compliant, 
+      and build a strong presence in today’s competitive market.
+    </p>
+  </div>
+
+  <!-- Services Grid -->
+  <div class="services-grid-cards">
+
+    <!-- Service 1 -->
+    <div class="service-card-box">
+      <img src="images/Bookkeping and Financial Reporting/images/1.jpg" alt="Bookkeeping" class="service-img">
+      <div class="service-content">
+        <div class="service-icon"><i class="fas fa-calculator"></i></div>
+        <h3>Bookkeeping & Financial Reporting</h3>
+        <p>Accurate records and reports to keep your business on track. We turn numbers into clarity that supports smarter decisions.</p>
+        <a href="services/bookkeeping.html" class="btn-service">Read More</a>
+      </div>
+    </div>
+
+    <!-- Service 2 -->
+    <div class="service-card-box">
+      <img src="images/Digital Marketing/Images/1.jpg" alt="Digital Marketing" class="service-img">
+      <div class="service-content">
+        <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
+        <h3>Digital Marketing & Creative Writing</h3>
+        <p>Grow your presence with powerful campaigns and content. Engage your audience with the right story, in the right place.</p>
+        <a href="services/digital-marketing.html" class="btn-service">Read More</a>
+      </div>
+    </div>
+
+    <!-- Service 3 -->
+    <div class="service-card-box">
+      <img src="images/Website Designing/Images/web-design-2038872_1280.jpg" alt="Website Design" class="service-img">
+      <div class="service-content">
+        <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+        <h3>Website Design & Development</h3>
+        <p>Modern, responsive, and user-friendly websites. Designed to showcase your brand and drive real results.</p>
+        <a href="services/website-design.html" class="btn-service">Read More</a>
+      </div>
+    </div>
+
+    <!-- Service 4 -->
+    <div class="service-card-box">
+      <img src="images/Survey and Impact Analysis/images/1.jpg" alt="Survey" class="service-img">
+      <div class="service-content">
+        <div class="service-icon"><i class="fas fa-poll"></i></div>
+        <h3>Survey, Data Analysis & Impact Studies</h3>
+        <p>Data-driven insights for better decisions. Our research and reports give you the evidence to act with confidence.</p>
+        <a href="services/survey.html" class="btn-service">Read More</a>
+      </div>
+    </div>
+
+    <!-- Service 5 -->
+    <div class="service-card-box">
+      <img src="images/Registration and Compliance/images/1.jpg" alt="Registration" class="service-img">
+      <div class="service-content">
+        <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+        <h3>Registration, Compliance & Applications</h3>
+        <p>Business setup, licensing, and regulatory filings made easy. We handle the paperwork so you can focus on growth.</p>
+        <a href="services/registration.html" class="btn-service">Read More</a>
+      </div>
+    </div>
+
+    <!-- Service 6 -->
+    <div class="service-card-box">
+      <img src="images/Training and Capacity Building/images/1.jpg" alt="Training" class="service-img">
+      <div class="service-content">
+        <div class="service-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+        <h3>Training & Capacity Building</h3>
+        <p>Practical programs that equip teams and individuals with skills. Learn, adapt, and perform better in a changing world.</p>
+        <a href="services/training.html" class="btn-service">Read More</a>
+      </div>
+    </div>
+
+
+    <!-- Service 7 -->
+    <div class="service-card-box">
+      <img src="images/Tax Consultancy/images/1.jpg" alt="Tax Consultancy" class="service-img">
+      <div class="service-content">
+        <div class="service-icon"><i class="fas fa-coins"></i></div>
+        <h3>Tax Consultancy</h3>
+        <p>Smart tax planning, filing, and compliance solutions. Stay ahead of deadlines and avoid costly penalties.</p>
+        <a href="services/tax.html" class="btn-service">Read More</a>
+      </div>
+    </div>
+
+    <!-- Service 8 -->
+    <div class="service-card-box">
+      <img src="images/Branding, Printing & Promotion.jpg" alt="Branding" class="service-img">
+      <div class="service-content">
+        <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+        <h3>Branding, Printing & Promotion</h3>
+        <p>Professional designs and promotional materials that stand out. Leave a lasting impression everywhere your brand appears.</p>
+        <a href="services/branding.html" class="btn-service">Read More</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom CTA -->
+  <div class="every-business-container">
+    <div class="every-business">
+      <div class="every-business-text">
+        <h2>We have a service for every business</h2>
+        <p>Whether you're a startup, SME, or large enterprise, we tailor our services to meet your unique needs.</p>
+      </div>
+      <a href="#contact" class="btn btn-gold">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================== Partner Section ================== -->
+<section class="partner-section section" id="partner">
+  <div class="our-partners container">
+    
+    <!-- Title -->
+    <div class="partner-header">
+      <h2 class="partner-title">Our Clients</h2>
+      <p class="partner-subtitle">
+        We are proud to have worked with a diverse portfolio of clients. 
+        Our commitment to excellence has earned the trust of businesses and organizations across industries.
+      </p>
+    </div>
+
+    <!-- Partner Logos Grid -->
+     <br>
+    <div class="partner-grid">
+      <div class="partner-card"><img src="images/partner/1.png" alt="BRELA"></div>
+      <div class="partner-card"><img src="images/partner/2.png" alt="TAUSI"></div>
+      <div class="partner-card"><img src="images/partner/3.png" alt="TRA"></div>
+      <div class="partner-card"><img src="images/partner/4.png" alt="TAUSI"></div>
+      <div class="partner-card"><img src="images/partner/5.png" alt="BRELA"></div>
+      <div class="partner-card"><img src="images/partner/6.png" alt="BRELA"></div>
+      <div class="partner-card"><img src="images/partner/7.png" alt="TAUSI"></div>
+      <div class="partner-card"><img src="images/partner/8.png" alt="TRA"></div>
+      <div class="partner-card"><img src="images/partner/9.png" alt="TAUSI"></div>
+      <div class="partner-card"><img src="images/partner/10.png" alt="BRELA"></div>
+      <div class="partner-card"><img src="images/partner/10.png" alt="BRELA"></div>
+      <div class="partner-card"><img src="images/partner/10.png" alt="BRELA"></div>
+    </div>
+
+    <!-- Why Choose Us -->
+ <!-- Why Choose Us -->
+<div class="why-choose-us">
+  <h2 class="why-title">Why Choose Us</h2>
+  <p class="why-subtitle">Experience • Creativity • Compliance</p>
+
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="icon-box"><i class="fas fa-certificate"></i></div>
+      <h3>Compliance & Legitimacy</h3>
+      <p>Registered and fully compliant with all relevant authorities to ensure trustworthy services.</p>
+    </div>
+    
+    <div class="why-card">
+      <div class="icon-box"><i class="fas fa-lightbulb"></i></div>
+      <h3>Tailored Solutions</h3>
+      <p>Dedicated to delivering impactful, customized solutions that match your business needs.</p>
+    </div>
+    
+    <div class="why-card">
+      <div class="icon-box"><i class="fas fa-users"></i></div>
+      <h3>Client Satisfaction</h3>
+      <p>Proven track record of client success stories and measurable long-term results.</p>
+    </div>
+    
+    <div class="why-card">
+      <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
+      <h3>Trusted & Secure</h3>
+      <p>We safeguard your data and maintain integrity in all of our professional engagements.</p>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <!-- Certifications -->
+  <div class="certifications">
+    <h2 class="cert-title">Our Legitimacy, Your Assurance</h2>
+    <p class="cert-subtitle">
+      MHS Consults operates with full compliance and recognition under Tanzanian laws and professional standards. 
+      The licenses and certificates below are more than paperwork—they’re proof of our credibility, 
+      integrity, and commitment to serving you with trust and confidence.
+    </p>
+
+    <button id="cert-btn" class="cert-btn" onclick="toggleCertificates()">View Our Certifications</button>
+
+    <div id="certificates" class="certificates-hidden">
+      <div class="cert-list">
+        <a href="pdfs/certificates/Business Licence.pdf" target="_blank" download>
+          <img src="images/certificates/Business Licence.jpg" alt="Business Licence">
+        </a>
+        <a href="pdfs/certificates/Certificate of Incorporation.pdf" target="_blank" download>
+          <img src="images/certificates/Certificate of Incorporation.jpg" alt="Certificate of Incorporation">
+        </a>
+        <a href="pdfs/certificates/MHS CONSULT NSSF CERTIFICATE.pdf" target="_blank" download>
+          <img src="images/certificates/MHS CONSULT NSSF CERTIFICATE.jpg" alt="NSSF Certificate">
+        </a>
+        <a href="pdfs/certificates/Tax Clearance-Viwanda na Biashara.pdf" target="_blank" download>
+          <img src="images/certificates/Tax Clearance-Viwanda na Biashara.jpg" alt="Tax Clearance">
+        </a>
+        <a href="pdfs/certificates/TIN Certificate.pdf" target="_blank" download>
+          <img src="images/certificates/TIN Certificate.jpg" alt="TIN Certificate">
+        </a>
+        <a href="pdfs/certificates/WCF Certificate.pdf" target="_blank" download>
+          <img src="images/certificates/WCF Certificate.jpg" alt="WCF Certificate">
+        </a>
+      </div>
+    </div>
+  </div>
+
+<div class="every-business-container-certifications">
+  <div class="every-business-certifications">
+    <div class="every-business-text-certifications">
+      <h2>We Serve Every Business, Big or Small</h2>
+      <p>
+        From startups to multinational corporations, our solutions are designed to help your business thrive. 
+        Leveraging our expertise, compliance, and tailored strategies, we ensure every client experiences growth, 
+        security, and lasting impact.
+      </p>
+    </div>
+    <a href="#contact" class="btn btn-gold">Get in Touch</a>
+  </div>
+</div>
+
+</section>
+
+
+
+<script>
+  // Swiper Init
+  const partnerSwiper = new Swiper(".partner-slider", {
+    slidesPerView: 5,
+    spaceBetween: 10,
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      320: { slidesPerView: 2, spaceBetween: 15 },
+      640: { slidesPerView: 3, spaceBetween: 20 },
+      1024: { slidesPerView: 4, spaceBetween: 20 }
+    }
+  });
+
+  // Certifications Toggle
+  function toggleCertificates() {
+    const certs = document.getElementById("certificates");
+    const btn = document.getElementById("cert-btn");
+    if (certs.style.display === "block") {
+      certs.style.display = "none";
+      btn.textContent = "View Our Certifications";
+    } else {
+      certs.style.display = "block";
+      btn.textContent = "Our Certifications";
+    }
+  }
+</script>
+
+<section class="contact-section" id="contact">
+  <div class="contact-container">
+
+    <!-- Left Side: Contact Form -->
+    <div class="contact-form">
+      <h2>Contact Us</h2>
+      <p>Feel free to contact us any time. We will get back to you as soon as we can!</p>
+
+      <form action="https://formsubmit.co/shadrackmussa97@gmail.com" method="POST">
+        <input type="hidden" name="_next" value="https://formsubmit.co/thanks">
+
+        <select name="service" required>
+          <option value="">I need help in ..</option>
+          <option>Bookkeeping & Financial Reporting</option>
+          <option>Digital Marketing</option>
+          <option>Website Designing</option>
+          <option>Creative Writing</option>
+          <option>Data Analysis & Visualization</option>
+          <option>Survey & Impact Analysis</option>
+          <option>Registration & Compliance</option>
+          <option>Trainings & Capacity Building</option>
+          <option>Applications & Follow-ups</option>
+          <option>Tax Consultancy</option>
+          <option>Branding, Promotion & Printing</option>
+        </select>
+
+        <input type="text" name="fullname" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="text" name="phone" placeholder="Phone Number">
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+
+        <button type="submit">SEND</button>
+      </form>
+    </div>
+
+    <!-- Right Side: Contact Info + Map -->
+    <div class="contact-info-box">
+      <h3>Get in Touch</h3>
+
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <p>info@mhsconsults.co.tz</p>
+      </div>
+
+      <div class="contact-item">
+        <i class="fas fa-phone"></i>
+        <p>+255 714 955 004</p>
+      </div>
+
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <p>House No. 37, University Road, Survey, Dar Es Salaam</p>
+      </div>
+
+      <div class="contact-item">
+        <i class="fas fa-clock"></i>
+        <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+      </div>
+
+      <!-- Google Map Embed -->
+   <div class="contact-map">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.011883575258!2d39.21533437503065!3d-6.768404293228362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4f992d620b9d%3A0xfd2797c8435b9f59!2sMHS%20Consults%20Limited!5e0!3m2!1sen!2stz!4v1759148911332!5m2!1sen!2stz" 
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Left Column: About + Social -->
+    <div class="footer-col">
+      <h3>MHS Consults</h3>
+      <p>
+        We provide business management and statistical services tailored to your needs. 
+        Your growth is our success.
+      </p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+       
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Why Choose Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-col">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="#">Bookkeeping & Financial Reporting</a></li>
+        <li><a href="#">Tax Consultancy</a></li>
+        <li><a href="#">Registration, Compliance & Applications</a></li>
+        <li><a href="#">Digital Marketing & Creative Writing</a></li>
+        <li><a href="#">Website Design & Development</a></li>
+        <li><a href="#">Survey, Data Analysis & Impact Studies</a></li>
+        <li><a href="#">Branding, Printing & Promotion</a></li>
+        <li><a href="#">Training & Capacity Building</a></li>
+       
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>House No. 37, University Road,<br>Survey, Dar Es Salaam</p>
+      <p><a href="tel:+255764725595">+255 764 725 595</a> | <a href="tel:+255628932655">+255 628 932 655</a></p>
+      <p><a href="mailto:info@mhsconsults.co.tz">info@mhsconsults.co.tz</a></p>
+    </div>
+
+  </div>
+
+  <!-- Bottom Row -->
+  <div class="footer-bottom">
+    <p>© 2025 MHS Consults. All Rights Reserved. Registered in Tanzania.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
