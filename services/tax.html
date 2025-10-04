@@ -85,10 +85,68 @@
       color: #e72429;
     }
 
+    .dropdown {
+  position: relative;
+}
+
+/* Dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;   /* appear below the parent */
+  left: 0;
+  background-color: #ffffff;
+  min-width: 240px; /* slightly wider */
+  border-radius: 6px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 8px 0;  /* spacing around items */
+  z-index: 2000;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dropdown links */
+.dropdown-content a {
+  color: #333;
+  padding: 10px 20px;  /* more breathing space */
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover effect on links */
+.dropdown-content a:hover {
+  background-color: #f0f8ff; /* light blue */
+  color: #e72429; /* accent color */
+}
+
+/* Optional: caret indicator for dropdown */
+.dropdown > a::after {
+  content: ' ▼';
+  font-size: 10px;
+  margin-left: 4px;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate caret on hover */
+.dropdown:hover > a::after {
+  transform: rotate(-180deg);
+}
+
+
     /* ===== HERO ===== */
     .hero {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
-                  url("../images/finance-bg.jpg") center/cover no-repeat;
+      background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+                  url("images/tax.jpg") center/cover no-repeat;
       color: #fff;
       padding: 100px 20px;
       text-align: center;
@@ -102,8 +160,10 @@
       max-width: 700px;
       margin: 0 auto;
     }
+    .hero p .tax {
+   color: #e72429;
+    }
 
-    /* ===== SERVICE SECTION ===== */
    /* ===== SERVICE SECTION (CARDS STYLE) ===== */
 .service-section {
   padding: 60px 20px;
@@ -302,7 +362,19 @@
       <ul class="nav-menu">
         <li><a href="../index.html#home" class="nav-link">Home</a></li>
         <li><a href="../index.html#about" class="nav-link">About Us</a></li>
-        <li><a href="../index.html#service" class="nav-link active">Services</a></li>
+    <li class="nav-item dropdown">
+     <a href="../index.html#service" class="nav-link active">Services</a>
+    <div class="dropdown-content">
+      <a href="bookkeeping.html">Bookkeeping & Financial Reporting</a>
+      <a href="tax.html">Tax Consultancy</a>
+      <a href="registration.html">Registration, Compliance & Applications</a>
+      <a href="digital-marketing.html">Digital Marketing & Creative Writing</a>
+      <a href="website-design.html">Website Design & Development</a>
+      <a href="survey.html">Survey, Data Analysis & Impact Studies</a>
+      <a href="branding.html">Branding, Printing & Promotion</a>
+      <a href="training.html">Training & Capacity Building</a>
+    </div>
+  </li>
         <li><a href="../index.html#partner" class="nav-link">Clients</a></li>
         <li><a href="../index.html#contact" class="nav-link">Contacts</a></li>
       </ul>
@@ -310,16 +382,16 @@
   </header>
 
   <!-- HERO -->
-  <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('../images/tax-bg.jpg') center/cover no-repeat;">
+  <section class="hero">
     <h1>Tax Consultancy</h1>
-    <p>“Simplifying the tax maze.” Tax doesn’t have to be a headache. We ensure your business remains compliant, efficient, and prepared.</p>
+    <p><span class="tax">“Simplifying the tax maze.” </span> Tax doesn’t have to be a headache. We ensure your business remains compliant, efficient, and prepared.</p>
   </section>
 
   <!-- SERVICE CONTENT -->
   <section class="service-section">
     <div class="service-intro">
       <h2>What We Do</h2>
-      <p>We help you plan smart, file on time, and respond to every tax challenge with confidence.</p>
+      <p> help you plan smart, file on time, and respond to every tax challenge with confidence.</p>
     </div>
 
     <div class="service-cards">
@@ -374,38 +446,40 @@
           We provide business management and statistical services tailored to your needs. 
           Your growth is our success.
         </p>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
+      <div class="social-icons">
+        <a href="https://web.facebook.com/mhsconsults"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://web.facebook.com/mhsconsults"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/mhsconsults"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/mhsconsults"><i class="fab fa-linkedin"></i></a>
+      </div>
       </div>
 
       <!-- Quick Links -->
       <div class="footer-col">
         <h4>Quick Links</h4>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Why Choose Us</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
+       <ul>
+             <li><a href="../index.html#home" class="nav-link">Home</a></li>
+          <li><a href="../index.html#about" class="nav-link">About Us</a></li>
+        <a href="../index.html#service" class="nav-link active">Services</a>
+          <li><a href="../index.html#partner" class="nav-link">Clients</a></li>
+         <li><a href="../index.html#contact" class="nav-link">Contacts</a></li>
+      </ul>
       </div>
 
       <!-- Services -->
       <div class="footer-col">
         <h4>Our Services</h4>
-        <ul>
-          <li><a href="#">Bookkeeping & Financial Reporting</a></li>
-          <li><a href="#">Tax Consultancy</a></li>
-          <li><a href="#">Registration, Compliance & Applications</a></li>
-          <li><a href="#">Digital Marketing & Creative Writing</a></li>
-          <li><a href="#">Website Design & Development</a></li>
-          <li><a href="#">Survey, Data Analysis & Impact Studies</a></li>
-          <li><a href="#">Branding, Printing & Promotion</a></li>
-          <li><a href="#">Training & Capacity Building</a></li>
-        </ul>
+          <ul>
+        <li><a href="bookkeeping.html">Bookkeeping & Financial Reporting</a></li>
+        <li><a href="tax.html">Tax Consultancy</a></li>
+        <li><a href="registration.html">Registration, Compliance & Applications</a></li>
+        <li><a href="digital-marketing.html">Digital Marketing & Creative Writing</a></li>
+        <li><a href="website-design.html">Website Design & Development</a></li>
+        <li><a href="survey.html">Survey, Data Analysis & Impact Studies</a></li>
+        <li><a href="branding.html">Branding, Printing & Promotion</a></li>
+        <li><a href="training.html">Training & Capacity Building</a></li>
+       
+      </ul>
       </div>
 
       <!-- Contact -->
@@ -423,6 +497,11 @@
       <p>© 2025 MHS Consults. All Rights Reserved. Registered in Tanzania.</p>
     </div>
   </footer>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    document.body.classList.add("loaded");
+  });
+</script>
 
 </body>
 </html>
