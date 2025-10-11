@@ -255,16 +255,19 @@ header {
    ============================== */
 .hero-section {
   position: relative;
-  height: calc(100vh - 160px); /* subtract total header height */
+  min-height: 100vh; /* full screen height */
   width: 100%;
   display: flex;
-  align-items: center;     /* center vertically */
-  justify-content: center; /* center horizontally */
+  align-items: center;
+  justify-content: center;
   text-align: center;
   overflow: hidden;
   font-family: 'Poppins', sans-serif;
-  margin-top: 160px; /* push below fixed header */
+  margin-top: 160px; /* remove manual push */
 }
+
+
+
 
 /* Background image */
 .hero-bg {
@@ -293,35 +296,45 @@ header {
 .hero-content {
   position: relative;
   z-index: 3;
-  max-width: 900px;
+  max-width: 1000px;
   padding: 20px;
   margin: 0 auto;
   animation: fadeSlideUp 1s ease forwards;
 }
 
-/* Headings */
 .hero-title {
-  font-size: clamp(2rem, 5vw, 4rem);
-  font-weight: 1000;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 700;
+  letter-spacing: 1px;
   margin-bottom: 20px;
   color: #fff;
+  text-transform: uppercase;
 }
 
+
 .subtitle {
-  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
-  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.5rem, 3.5vw, 2.8rem);
   color: #fff;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+
+.description {
+  font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+  margin-bottom: 30px;
+  color: #ddd;
+  line-height: 1.7;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .subtitle .highlight {
   color: #f9b234;
-}
-
-.description {
-  font-size: clamp(1rem, 2vw, 1.3rem);
-  margin-bottom: 30px;
-  color: #ddd;
-  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.5rem, 3.5vw, 2.8rem);
+   font-weight: 500;
 }
 
 /* Buttons */
@@ -333,7 +346,11 @@ header {
   text-decoration: none;
   display: inline-block;
   transition: all 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600; /* makes it bold and more clickable */
+  letter-spacing: 0.5px;
 }
+
 
 .btn-gold {
   background-color: #f9b234;
@@ -397,6 +414,8 @@ header {
   margin-top: 60px;
 }
 
+
+
 .about-bg {
   position: absolute;
   top: 0;
@@ -445,18 +464,23 @@ header {
 }
 
 .about-left h2 {
-  font-size: 60px;
+  font-size: clamp(3rem, 6vw, 6rem);
   margin-bottom: 20px;
+  letter-spacing: 1px;
   font-weight: 800;
   color: #fff;
   text-transform: uppercase;
+   font-family: 'Bebas Neue', sans-serif;
 }
 
 
+
+
 .about-left p {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.7;
   margin-bottom: 15px;
+   font-family: 'Montserrat', sans-serif;
 }
 
 .btn-learn-more {
@@ -641,7 +665,9 @@ header {
 }
 
 .title-header h2 {
-  font-size: 60px;
+    font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 6vw, 6rem);
+  /* font-size: 60px; */
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -649,7 +675,8 @@ header {
   position: relative;
 }
 .title-header h2 .team {
-  font-size: 60px;
+   font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 6vw, 6rem);
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -670,11 +697,12 @@ header {
 }
 
 .title-header p {
-  font-size: 20px;
+   font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.4rem, 3.4vw, 2.6rem);
   color: #f0f0f0;
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
-  line-height: 1.7;
+  line-height: 1.4;
 }
 
 /* Responsive */
@@ -934,7 +962,8 @@ header {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-bottom: 80px;
+  /* margin-bottom: 40px; */
+  margin-top: 80px;
 }
 
 .services-header .overlay {
@@ -957,10 +986,14 @@ header {
 }
 
 .services-header h1 {
-  font-size: 48px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 6vw, 6rem);
+  letter-spacing: 1px;
   font-weight: 700;
   margin-bottom: 8px;
+  text-transform: uppercase;
 }
+
 
 .services-header p {
   font-size: 16px;
@@ -1162,7 +1195,7 @@ header {
   font-weight: 700;
   color: #222;
   margin-bottom: 15px;
- font-family: 'lato', serif;
+  font-family: 'Montserrat', sans-serif;
  text-transform: uppercase;
 }
 
@@ -1171,7 +1204,7 @@ header {
   font-weight: 700;
   color: #e72429;
   margin-bottom: 15px;
- font-family: 'lato', serif;
+ font-family: 'Montserrat', sans-serif;
  text-transform: uppercase;
 }
 
@@ -1311,17 +1344,19 @@ header {
 
 /* === Header === */
 .partner-header {
-  margin-bottom: 60px;
+  margin-top: 80px;
 }
 
 .partner-title {
-  font-size: 60px;
+ font-size: clamp(3rem, 6vw, 6rem);
   font-weight: 800;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #fff;
   position: relative;
   display: inline-block;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
 }
 
 .partner-title::after {
@@ -1334,6 +1369,7 @@ header {
 }
 
 .partner-subtitle {
+  font-family: 'Poppins', sans-serif;
   margin-top: 25px;
   font-size: 20px;
   color: #ccc;
@@ -1344,34 +1380,34 @@ header {
 /* === Partner Grid === */
 .partner-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-top: 40px;
 }
 
 .partner-card {
-  background: #333;
+  background: #fff; /* white looks cleaner with colored logos */
   height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
-  filter: grayscale(100%);
+  filter: none; /* removes grayscale */
   transition: all 0.3s ease;
-  padding: 16px; /* keep logos spaced inside cards */
-  border-radius: 8px;
+  padding: 16px;
+  border-radius: 2px;
 }
 
 .partner-card img {
   max-width: 150px;
-  max-height: 90%; /* keep tall logos constrained */
+  max-height: 90%;
   width: auto;
-  opacity: 0.6;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 1; /* full color */
   object-fit: contain;
 }
 
 .partner-card:hover {
   filter: grayscale(0%);
-  background: #1a1a1a;
+  background: #fff;
 }
 
 .partner-card:hover img {
@@ -1393,12 +1429,15 @@ header {
   font-weight: 800;
   margin-bottom: 10px;
   color: #111;
+  font-family: 'Poppins', sans-serif;
 }
 
 .why-subtitle {
   font-size: 18px;
   color: #666;
   margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+  /* font-size: clamp(1.5rem, 3.5vw, 2.8rem); */
 }
 
 .why-grid {
@@ -1425,6 +1464,7 @@ header {
 }
 
 .why-card p {
+  font-family: 'Poppins', sans-serif;
   font-size: 15px;
   color: #666;
   line-height: 1.5;
@@ -1610,6 +1650,7 @@ header {
   margin: auto;
   flex-wrap: wrap;
   align-items: flex-start;
+  margin-top: 80px;
 }
 
 /* Left Form */

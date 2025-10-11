@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us – MHS Consults</title>
+
+  <!-- Bootstrap & Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /> 
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============ RESET ============ */
+/* ===== RESET & GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
+  opacity: 0;
+  animation: fadeInPage 1s ease-in forwards;
+}
+
+/* ===== PAGE FADE-IN ===== */
+@keyframes fadeInPage {
+  to {
+    opacity: 1;
+  }
+}
+
+/* ===== SECTION SCROLL ANIMATION ===== */
+.section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.section{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+    /* ============ TOP BAR ============ */
+   .top-bar {
+    background:#e72429;
+    color: #fff;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 4000;
+  }
+  .search-input {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+  }
+  .lang-select {
+    padding: 6px;
+    border-radius: 4px;
+    border: none;
+  }
+
+  .navbar {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 3000;
+  }
+  .navbar img.logo-image { height: 50px; }
+  .nav-menu { list-style: none; display: flex; gap: 20px; }
+  .nav-link {
+    text-decoration: none; color: #333; font-weight: 500; transition: 0.3s;
+  }
+  .nav-link:hover, .nav-link.active { color: #e72429; }
+
+  
+    .dropdown {
+  position: relative;
+}
+
+/* Dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;   /* appear below the parent */
+  left: 0;
+  background-color: #ffffff;
+  min-width: 240px; /* slightly wider */
+  border-radius: 6px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 8px 0;  /* spacing around items */
+  z-index: 2000;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dropdown links */
+.dropdown-content a {
+  color: #333;
+  padding: 10px 20px;  /* more breathing space */
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover effect on links */
+.dropdown-content a:hover {
+  background-color: #f0f8ff; /* light blue */
+  color: #e72429; /* accent color */
+}
+
+/* Optional: caret indicator for dropdown */
+.dropdown > a::after {
+  content: ' ▼';
+  font-size: 10px;
+  margin-left: 4px;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate caret on hover */
+.dropdown:hover > a::after {
+  transform: rotate(-180deg);
+}
+    /* ============ HERO SECTION ============ */
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url("images/Homepage/1.jpg") center/cover no-repeat;
+      color: #fff;
+      padding: 200px 40px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .hero h1 {
+      font-size: 3.0rem;
+      margin-bottom: 15px;
+      font-weight: 800;
+      text-transform: uppercase;
+      animation: fadeSlideUp 1s ease forwards;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+      animation: fadeSlideUp 1s ease forwards;
+    }
+
+    /* ============ STORY SECTION (Who We Are / Our Story) ============ */
+    .story-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      background: #2e2d2d;
+      color: #fff;
+      padding: 100px 10%;
+      gap: 60px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      animation: fadeSlideUp 1s ease forwards;
+    }
+
+    .story-column {
+      flex: 1 1 45%;
+    }
+
+    .story-column h2 {
+      font-size: 3rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+
+    .story-column h2 span {
+      color: #e72429;
+    }
+
+    .underline {
+      width: 60px;
+      height: 4px;
+      background: #e72429;
+      margin-bottom: 20px;
+      animation: underlineGrow 1.2s ease-out forwards;
+      transform-origin: left;
+    }
+
+    @keyframes underlineGrow {
+      from { transform: scaleX(0); }
+      to { transform: scaleX(1); }
+    }
+
+    .story-column p {
+      color: #ccc;
+      line-height: 1.8;
+      font-size: 1rem;
+      margin-bottom: 10px;
+      animation: fadeSlideUp 1s ease forwards;
+    }
+
+    /* Responsive: Story Section */
+    @media (max-width: 992px) {
+      .story-section {
+        flex-direction: column;
+        padding: 60px 20px;
+      }
+
+      .story-column {
+        flex: 1 1 100%;
+      }
+
+      .story-column h2 {
+        font-size: 2.2rem;
+      }
+    }
+
+    /* ============ VALUES SECTION ============ */
+    .values-section {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+      animation: fadeSlideUp 1s ease forwards;
+    }
+
+    .values-section h2 {
+      text-align: left;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 40px;
+    }
+
+    .values-section h2 span {
+      color: #e72429;
+      border-bottom: 3px solid #e72429;
+      padding-bottom: 4px;
+    }
+
+ .values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+    .value-item {
+      text-align: left;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+
+    .value-item.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .value-item i {
+      color: #e72429;
+      font-size: 32px;
+      min-width: 40px;
+      transition: transform 0.4s ease;
+    }
+
+    .value-item.show i {
+      transform: rotate(360deg);
+    }
+
+    .value-item h4 {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      color: #111;
+      font-weight: 600;
+    }
+
+    .value-item p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* ============ MISSION & VISION ============ */
+    .mission-vision {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .accordion-item {
+      flex: 1 1 45%;
+      background: #fff;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      max-width: 500px;
+    }
+
+    .accordion-item:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    }
+
+    .accordion-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 1.2rem 1.5rem;
+    }
+
+    .accordion-icon {
+      background: #fff5f5;
+      color: #e72429;
+      font-size: 1.5rem;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .accordion-button {
+      background-color: transparent;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #111;
+      border: none;
+      box-shadow: none !important;
+      text-align: left;
+      flex-grow: 1;
+      padding: 0;
+    }
+
+    .accordion-button::after {
+      content: "+";
+      font-size: 1.5rem;
+      margin-left: auto;
+      transition: transform 0.3s ease;
+      color: #111;
+    }
+
+    .accordion-button:not(.collapsed)::after {
+      content: "–";
+      color: #e72429;
+    }
+
+    .accordion-button:not(.collapsed) {
+      color: #e72429;
+    }
+
+    .accordion-body {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      background: #f9f9f9;
+      border-top: 1px solid #eee;
+      padding: 1rem 1.5rem;
+      border-radius: 0 0 15px 15px;
+    }
+
+    @media (max-width: 768px) {
+      .accordion-item {
+        flex: 1 1 100%;
+      }
+    }
+
+    /* ============ CTA ============ */
+    .cta {
+      background: #e72429;
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+      border-radius: 12px;
+      margin: 60px auto;
+      max-width: 1100px;
+    }
+
+    .cta a {
+      color: #fff;
+      text-decoration: none;
+      border: 2px solid #fff;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: 0.3s;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .cta a:hover {
+      background: #fff;
+      color: #e72429;
+    }
+
+    /* ============ FOOTER ============ */
+    .footer {
+      background: #111;
+      color: #ddd;
+      padding: 60px 20px 20px;
+      font-family: Arial, sans-serif;
+      width: 100%;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+      width: 100%;
+    }
+
+    .footer-col h3,
+    .footer-col h4 {
+      color: #fff;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .footer-col p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .footer-col a {
+      color: #e72429;
+      text-decoration: none;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+      color: #ddd;
+      font-size: 14px;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    .footer-col ul li a:hover {
+      color: #e72429;
+    }
+
+    .social-icons {
+      margin-top: 15px;
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      color: #fff;
+      background: #222;
+      padding: 8px 10px;
+      border-radius: 50%;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      background: #e72429;
+      color: #111;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #333;
+      margin-top: 40px;
+      padding-top: 15px;
+      text-align: center;
+      font-size: 13px;
+      color: #aaa;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+<header>
+  <div class="top-bar">
+    <input type="text" placeholder="Search..." class="search-input" />
+    <select class="lang-select">
+      <option>English</option>
+      <option>Swahili</option>
+    </select>
+  </div>
+  <nav class="navbar">
+    <div class="nav-logo">
+      <img src="images/mhs-logo.png" class="logo-image" alt="Mhs Logo" />
+    </div>
+    <ul class="nav-menu">
+      <li><a href="index.html#home" class="nav-link">Home</a></li>
+      <li><a href="index.html#about" class="nav-link">About Us</a></li>
+   
+     <li class="nav-item dropdown">
+    <a href="index.html#service" class="nav-link active">Services</a>
+    <div class="dropdown-content">
+      <a href="services/bookkeeping.html">Bookkeeping & Financial Reporting</a>
+      <a href="services/tax.html">Tax Consultancy</a>
+      <a href="services/registration.html">Registration, Compliance & Applications</a>
+      <a href="services/digital-marketing.html">Digital Marketing & Creative Writing</a>
+      <a href="services/website-design.html">Website Design & Development</a>
+      <a href="services/survey.html">Survey, Data Analysis & Impact Studies</a>
+      <a href="services/branding.html">Branding, Printing & Promotion</a>
+      <a href="services/training.html">Training & Capacity Building</a>
+    </div>
+  </li>
+      <li><a href="index.html#partner" class="nav-link">Clients</a></li>
+      <li><a href="index.html#contact" class="nav-link">Contacts</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <h1>About Us - MHS Consults</h1>
+    <p>“Your digital office, designed for success.” <br>We help businesses translate ideas into strategies, and strategies into results.</p>
+  </section>
+
+  <!-- ===== WHO WE ARE + OUR STORY ===== -->
+  <section class="story-section" id="about">
+    <div class="story-column">
+      <h2><span>Who</span> We Are</h2>
+      <div class="underline"></div>
+      <p>
+        MHS Consults is a dynamic business management and investment agency that helps individuals,
+        businesses, and organizations translate ideas into real outcomes. We simplify complex processes
+        from tax and compliance to branding and digital transformation, so our clients can focus on
+        growing their businesses.
+      </p>
+    </div>
+
+    <div class="story-column">
+      <h2><span>Our</span> Story</h2>
+      <div class="underline"></div>
+      <p>
+        MHS Consults began with a simple belief: that small and mid-sized businesses deserve the same level
+        of insight, efficiency, and creativity as large corporations. From consultancy, we evolved into a
+        full-service partner offering accounting, tax advisory, registration and compliance, branding,
+        digital marketing, web design, creative content, data analytics, and training services.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== CORE VALUES + MISSION & VISION ===== -->
+  <section class="values-section" id="values">
+    <h2><span>Our</span> Values</h2>
+
+    <div class="values-grid">
+      <div class="value-item">
+        <i class="fa-solid fa-lightbulb"></i>
+        <div>
+          <h4>Fresh</h4>
+          <p>We cultivate innovative ideas and data-driven approaches that spark creativity and progress.</p>
+        </div>
+      </div>
+
+      <div class="value-item">
+        <i class="fa-solid fa-gauge-high"></i>
+        <div>
+          <h4>Speed</h4>
+          <p>We deliver results swiftly and efficiently while maintaining exceptional quality.</p>
+        </div>
+      </div>
+
+      <div class="value-item">
+        <i class="fa-solid fa-gears"></i>
+        <div>
+          <h4>Efficiency</h4>
+          <p>We optimize every process to ensure smart, timely, and measurable outcomes.</p>
+        </div>
+      </div>
+
+      <div class="value-item">
+        <i class="fa-solid fa-gem"></i>
+        <div>
+          <h4>Premium Quality</h4>
+          <p>We bring together top-tier talent to create premium experiences and services.</p>
+        </div>
+      </div>
+
+      <div class="value-item">
+        <i class="fa-solid fa-people-carry-box"></i>
+        <div>
+          <h4>Enabling Clients</h4>
+          <p>We empower our clients by listening, collaborating, and designing lasting solutions.</p>
+        </div>
+      </div>
+
+      <div class="value-item">
+        <i class="fa-solid fa-bullseye"></i>
+        <div>
+          <h4>Make a Mark</h4>
+          <p>We aim to create transformative, meaningful impact in everything we do.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mission & Vision -->
+    <div class="mission-vision">
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-icon">
+            <i class="fa-solid fa-bullseye"></i>
+          </div>
+          <button class="accordion-button" type="button" data-bs-toggle="collapse"
+            data-bs-target="#missionCollapse" aria-expanded="true" aria-controls="missionCollapse">
+            Mission
+          </button>
+        </div>
+        <div id="missionCollapse" class="accordion-collapse collapse show">
+          <div class="accordion-body">
+            To empower businesses and organizations through innovative consulting, analytical insights,
+            and creative solutions that enhance performance, strengthen compliance, and unlock opportunities.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-icon">
+            <i class="fa-solid fa-eye"></i>
+          </div>
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#visionCollapse" aria-expanded="false" aria-controls="visionCollapse">
+            Vision
+          </button>
+        </div>
+        <div id="visionCollapse" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            To become a trusted partner and thought leader in business consulting and analytics across Africa,
+            driving innovation, compliance, and sustainable growth.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta">
+    <h2>Let’s Build Something Great Together</h2>
+    <p>Your business deserves a partner who understands both the numbers and the story behind them.</p>
+    <a href="index.html#contact">Contact Us</a>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-col">
+        <h3>MHS Consults</h3>
+        <p>We provide business management and statistical services tailored to your needs. Your growth is our success.</p>
+        <div class="social-icons">
+          <a href="https://web.facebook.com/mhsconsults"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/mhsconsults"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/mhsconsults"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/mhsconsults"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="index.html#service">Services</a></li>
+          <li><a href="#">Why Choose Us</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="services/bookkeeping.html">Bookkeeping & Financial Reporting</a></li>
+          <li><a href="services/tax.html">Tax Consultancy</a></li>
+          <li><a href="services/registration.html">Registration & Compliance</a></li>
+          <li><a href="services/digital-marketing.html">Digital Marketing & Creative Writing</a></li>
+          <li><a href="services/website-design.html">Website Design & Development</a></li>
+          <li><a href="services/survey.html">Survey & Data Analysis</a></li>
+          <li><a href="services/branding.html">Branding & Promotion</a></li>
+          <li><a href="services/training.html">Training & Capacity Building</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>House No. 37, University Road,<br>Survey, Dar Es Salaam</p>
+        <p><a href="tel:+255741175227">+255 741 175 227</a> || <a href="tel:+255655292854">+255 655 292 854</a></p>
+        <p><a href="mailto:info@mhsconsults.co.tz">info@mhsconsults.co.tz</a></p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 MHS Consults. All Rights Reserved. Registered in Tanzania.</p>
+    </div>
+  </footer>
+
+  <!-- ===== SCROLL ANIMATION ===== -->
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.value-item').forEach(item => observer.observe(item));
+  </script>
+
+</body>
+</html>
