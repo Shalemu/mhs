@@ -16,132 +16,220 @@
 <style>
     /* ===== RESET ===== */
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { 
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6;
-    color: #333; 
-    margin: 0;
-    padding-top: 100px; /* top-bar + navbar height */
-    }
 
-    /* ===== HEADER ===== */
-   .top-bar {
-    background:#e72429;
-    color: #fff;
-    padding: 8px 20px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 15px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 4000;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding-top: 100px; /* top-bar + navbar height */
 }
 
+/* ===== TOP BAR ===== */
+.top-bar {
+  background: #e72429;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  padding: 8px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 4000;
+}
 
-    .search-input {
-      padding: 6px 10px;
-      border: none;
-      border-radius: 4px;
-    }
-    .lang-select {
-      padding: 6px;
-      border-radius: 4px;
-      border: none;
-    }
-   /* Navbar below top-bar */
+.search-input {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: none;
+}
+
+.lang-select {
+  padding: 6px;
+  border-radius: 4px;
+  border: none;
+}
+
+/* ===== NAVBAR ===== */
 .navbar {
-    background: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 20px;
-    position: fixed;
-    top: 40px; /* height of top-bar */
-    left: 0;
-    width: 100%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    z-index: 3000;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  position: fixed;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 3000;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-    .navbar img.logo-image {
-      height: 50px;
-    }
-    .nav-menu {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-    .nav-link {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-    .nav-link:hover,
-    .nav-link.active {
-      color: #e72429;
-    }
-
-    .dropdown {
-  position: relative;
+.nav-logo img {
+  height: 50px;
 }
 
-/* Dropdown content */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #e72429;
+}
+
+/* ===== DROPDOWN ===== */
+.dropdown { position: relative; }
+
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 100%;   /* appear below the parent */
+  top: 100%;
   left: 0;
-  background-color: #ffffff;
-  min-width: 240px; /* slightly wider */
+  background-color: #fff;
+  min-width: 240px;
   border-radius: 6px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  padding: 8px 0;  /* spacing around items */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  padding: 8px 0;
   z-index: 2000;
-  transition: opacity 0.3s ease, transform 0.3s ease;
   opacity: 0;
   transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
   display: block;
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Dropdown links */
 .dropdown-content a {
   color: #333;
-  padding: 10px 20px;  /* more breathing space */
-  text-decoration: none;
+  padding: 10px 20px;
   display: block;
   font-size: 14px;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
-/* Hover effect on links */
 .dropdown-content a:hover {
-  background-color: #f0f8ff; /* light blue */
-  color: #e72429; /* accent color */
+  background-color: #f0f8ff;
+  color: #e72429;
 }
 
-/* Optional: caret indicator for dropdown */
 .dropdown > a::after {
-  content: ' ▼';
+  content: " ▼";
   font-size: 10px;
   margin-left: 4px;
   transition: transform 0.3s ease;
 }
 
-/* Rotate caret on hover */
 .dropdown:hover > a::after {
   transform: rotate(-180deg);
 }
 
+
+/* ===== MENU TOGGLE ICON ===== */
+.menu-toggle {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  font-size: 26px;
+  color: #e72429;
+  cursor: pointer;
+  z-index: 3000;
+}
+
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-top: 2px solid #e72429;
+    padding: 15px 0;
+    text-align: center;
+    z-index: 2000;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    margin: 8px 0;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background: #f8f8f8;
+  }
+}
+
+
+/* ===== MOBILE MENU ===== */
+@media (max-width: 900px) {
+  .menu-toggle { display: flex; }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-top: 2px solid #e72429;
+    padding: 15px 0;
+    text-align: center;
+    z-index: 2000;
+    text-decoration: none;
+  }
+
+
+  .dropdown-content a {
+    text-decoration: none; /* ensure no underline */
+    color: #333; /* optional: keep text color consistent */
+  }
+
+
+
+  .nav-menu.active { display: flex; }
+
+  .nav-menu li {
+     margin: 8px 0; 
+     text-decoration: none;
+    }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background: #f8f8f8;
+    text-decoration: none;
+  }
+}
 
     /* ===== HERO ===== */
    .hero {
@@ -151,42 +239,70 @@
   padding: 120px 20px;
   text-align: center;
 }
-.hero h1 { 
-  font-size: 3rem; 
-  margin-bottom: 15px; 
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-.hero p { 
-  font-size: 1.2rem; 
-  max-width: 700px; 
-  margin: 0 auto; 
-  line-height: 1.7;
-}
+  .hero h1 {
+     font-size: 4.0rem;
+      /* margin-bottom: 15px;  */
+      /* text-transform: uppercase; */
+      font-family: 'Bebas Neue', sans-serif;
+      font-weight: 600;
+    
+    }
+  .hero p {
+     font-size: 2.0rem; 
+     max-width: 1200px; 
+     margin: 0 auto; 
+     margin-bottom: 15px;
+    }
 
+ /* ===== SERVICE SECTION ===== */
 .service-section {
   padding: 70px 20px;
   max-width: 1200px;
   margin: auto;
   text-align: center;
+  position: relative;
 }
+
+/* Header */
 .service-intro h2 {
-  font-size: 2.4rem;
+  font-size: 3.4rem;
   font-weight: 700;
-  color: #222;
+  color: #e72429; /* standout header */
   margin-bottom: 10px;
+  font-family: 'Bebas Neue', sans-serif;
+  position: relative;
 }
+
+/* Animated underline */
+.service-intro h2::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #e72429, #ff7b00);
+  margin: 10px auto 0;
+  border-radius: 3px;
+  animation: slideUnderline 1.5s ease forwards;
+}
+
+@keyframes slideUnderline {
+  from { width: 0; }
+  to { width: 120px; }
+}
+
 .service-intro p {
   color: #666;
   font-size: 1.1rem;
   margin-bottom: 50px;
 }
 
+/* ===== SERVICE CARDS ===== */
 .service-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Always 3 per row */
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   justify-content: center;
+  margin-top: 50px;
 }
 
 .service-card {
@@ -194,27 +310,40 @@
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 1.2s ease, opacity 1.2s ease, box-shadow 0.3s ease;
   border-top: 5px solid #e72429;
+  opacity: 0;             /* hidden initially */
+  transform: translateY(60px); /* start below */
 }
+
 .service-card i {
   font-size: 2.5rem;
   color: #e72429;
   margin-bottom: 20px;
 }
+
 .service-card h3 {
   font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 12px;
+  color: #000;
 }
+
 .service-card p {
   font-size: 1rem;
-  color: #555;
+  color: #000;
   line-height: 1.6;
 }
+
 .service-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+/* Animate cards when visible */
+.service-card.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ===== CTA ===== */
@@ -226,14 +355,17 @@
   border-radius: 15px;
   color: #fff;
 }
+
 .service-cta h3 {
-  font-size: 1.8rem;
+  font-size: 2.8rem;
   margin-bottom: 15px;
 }
+
 .service-cta p {
-  font-size: 1.1rem;
+  font-size: 1.8rem;
   margin-bottom: 25px;
 }
+
 .cta-btn {
   background: #fff;
   color: #e72429;
@@ -243,6 +375,7 @@
   text-decoration: none;
   transition: 0.3s;
 }
+
 .cta-btn:hover {
   background: #111;
   color: white;
@@ -251,14 +384,16 @@
 /* ===== RESPONSIVE ===== */
 @media (max-width: 992px) {
   .service-cards {
-    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (max-width: 600px) {
   .service-cards {
-    grid-template-columns: 1fr; /* stack on mobile */
+    grid-template-columns: 1fr;
   }
 }
+
 /* ===== FOOTER ===== */
  /* Footer Styles */
 .footer {
@@ -272,7 +407,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 40px;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -343,45 +478,120 @@
 
   </style>
 
-  <!-- HEADER -->
-  <header>
-    <div class="top-bar">
+
+<!-- ===== HEADER ===== -->
+<header class="sticky-header">
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="left-links"></div>
+    <div class="right-links">
       <input type="text" placeholder="Search..." class="search-input" />
       <select class="lang-select">
         <option>English</option>
         <option>Swahili</option>
       </select>
     </div>
-    <nav class="navbar">
-      <div class="nav-logo">
-        <img src="../images/mhs-logo.png" class="logo-image" alt="Mhs Logo" />
-      </div>
-      <ul class="nav-menu">
-        <li><a href="../index.html#home" class="nav-link">Home</a></li>
-        <li><a href="../index.html#about" class="nav-link">About Us</a></li>
-          <li class="nav-item dropdown">
-     <a href="../index.html#service" class="nav-link active">Services</a>
-    <div class="dropdown-content">
-      <a href="bookkeeping.html">Bookkeeping & Financial Reporting</a>
-      <a href="tax.html">Tax Consultancy</a>
-      <a href="registration.html">Registration, Compliance & Applications</a>
-      <a href="digital-marketing.html">Digital Marketing & Creative Writing</a>
-      <a href="website-design.html">Website Design & Development</a>
-      <a href="survey.html">Survey, Data Analysis & Impact Studies</a>
-      <a href="branding.html">Branding, Printing & Promotion</a>
-      <a href="training.html">Training & Capacity Building</a>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <a href="../index.html#home">
+        <img src="../images/mhs-logo.png" class="logo-image" alt="MHS Logo" />
+      </a>
     </div>
-  </li>
-        <li><a href="../index.html#partner" class="nav-link">Clients</a></li>
-        <li><a href="../index.html#contact" class="nav-link">Contacts</a></li>
-      </ul>
-    </nav>
-  </header>
+
+    <!-- Hamburger / Close Icon -->
+    <div class="menu-toggle" id="mobile-menu">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <ul class="nav-menu">
+      <li><a href="../index.html#home" class="nav-link">Home</a></li>
+      <li><a href="../index.html#about" class="nav-link">About Us</a></li>
+
+      <li class="nav-item dropdown">
+        <a href="../index.html#service" class="nav-link active">Services</a>
+        <div class="dropdown-content">
+          <a href="bookkeeping.html">Bookkeeping & Financial Reporting</a>
+          <a href="tax.html">Tax Consultancy</a>
+          <a href="registration.html">Registration, Compliance & Applications</a>
+          <a href="digital-marketing.html">Digital Marketing & Creative Writing</a>
+          <a href="website-design.html">Website Design & Development</a>
+          <a href="survey.html">Survey, Data Analysis & Impact Studies</a>
+          <a href="branding.html">Branding, Printing & Promotion</a>
+          <a href="training.html">Training & Capacity Building</a>
+        </div>
+      </li>
+
+      <li><a href="../index.html#partner" class="nav-link">Clients</a></li>
+      <li><a href="../index.html#contact" class="nav-link">Contacts</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ===== Font Awesome (Add This in <head>) ===== -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+
+<script>
+  // ===== MOBILE MENU TOGGLE =====
+  const menuToggle = document.getElementById('mobile-menu');
+  const navMenu = document.querySelector('.nav-menu');
+
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+
+    const icon = menuToggle.querySelector('i');
+    if (menuToggle.classList.contains('active')) {
+      icon.classList.replace('fa-bars', 'fa-times'); // switch to close icon
+    } else {
+      icon.classList.replace('fa-times', 'fa-bars'); // switch back to hamburger
+    }
+  });
+
+  // ===== MOBILE DROPDOWN TOGGLE =====
+  const dropdownLinks = document.querySelectorAll('.dropdown > a');
+  dropdownLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const parentDropdown = link.parentElement;
+      if (window.innerWidth <= 900) {
+        parentDropdown.classList.toggle('active');
+        if (!link.getAttribute('href') || link.getAttribute('href') === '#') {
+          e.preventDefault();
+        }
+      }
+    });
+  });
+
+  // ===== STICKY HEADER SHADOW =====
+  const header = document.querySelector('.sticky-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+
+  // Optional: Add body fade-in effect
+  window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+  });
+</script>
+
+
+
+
+
 
 <!-- HERO -->
 <section class="hero">
   <h1>Training & Capacity Building</h1>
-   <p>“Building skills. Building futures.” We design and deliver training programs that equip individuals, teams, and organizations with the knowledge and skills to thrive in a changing world.</p>
+   <p>Building skills. Building futures. We design and deliver training programs that equip individuals, teams, and organizations with the knowledge and skills to thrive in a changing world.</p>
   </div>
 </section>
 
@@ -504,6 +714,28 @@
   window.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add("loaded");
   });
+
+ 
+const serviceCards = document.querySelectorAll('.service-card');
+
+function animateServiceCards() {
+  const triggerPoint = window.innerHeight * 0.9;
+
+  serviceCards.forEach((card, index) => {
+    const cardTop = card.getBoundingClientRect().top;
+
+    if(cardTop < triggerPoint) {
+      setTimeout(() => {
+        card.classList.add('visible');
+      }, index * 400); // slower stagger: 0.4s delay per card
+    }
+  });
+}
+
+window.addEventListener('scroll', animateServiceCards);
+window.addEventListener('load', animateServiceCards);
+
+
 </script>
 
 </body>

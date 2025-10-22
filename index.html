@@ -15,89 +15,107 @@
 </head>
 <body>
     
-<header>
+<header class="sticky-header">
   <!-- Top orange bar -->
   <div class="top-bar">
-    <div class="left-links">
-      <!-- <a href="#">Personal</a>
-      <a href="#">Enterprise</a> -->
-    </div>
+    <div class="left-links"></div>
     <div class="right-links">
       <input type="text" placeholder="Search..." class="search-input" />
       <select class="lang-select">
         <option>English</option>
         <option>Swahili</option>
       </select>
-      <!-- <a href="#" class="login">Login</a> -->
     </div>
   </div>
 
-  <!-- White nav bar -->
-<nav class="navbar">
-  <div class="nav-logo">
-    <img src="images/mhs-logo.png" class="logo-image" alt="Mhs Logo" />
-  </div>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <a href="index.html#home">
+        <img src="images/mhs-logo.png" class="logo-image" alt="MHS Logo" />
+      </a>
+    </div>
 
-  <!-- Close button OUTSIDE the ul -->
-  <!-- <button id="menu-close-button" class="fas fa-times"></button> -->
-
-<ul class="nav-menu">
-  <li class="nav-item"><a href="#" data-target="home" class="nav-link active">Home</a></li>
-  <li class="nav-item"><a href="#" data-target="about" class="nav-link">About Us</a></li>
-
-  <!-- Services with dropdown -->
-  <li class="nav-item dropdown">
-    <a href="#" data-target="service" class="nav-link">Services</a>
-    <div class="dropdown-content">
-      <a href="services/bookkeeping.html">Bookkeeping & Financial Reporting</a>
-      <a href="services/tax.html">Tax Consultancy</a>
-      <a href="services/registration.html">Registration, Compliance & Applications</a>
-       <a href="services/website-design.html">Website Design & Development</a>
-      <a href="services/digital-marketing.html">Digital Marketing & Creative Writing</a>
-        <a href="services/branding.html">Branding, Printing & Promotion</a>
-       <a href="services/training.html">Training & Capacity Building</a>
-      <a href="services/survey.html">Survey, Data Analysis & Impact Studies</a>
+    <!-- Hamburger / Close Icon -->
+    <div class="menu-toggle" id="mobile-menu">
+      <i class="fa-solid fa-bars"></i>
+    </div>
     
-     
-    </div>
-  </li>
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="#" data-target="home" class="nav-link active">Home</a></li>
+      <li class="nav-item"><a href="#" data-target="about" class="nav-link">About Us</a></li>
 
-  <li class="nav-item"><a href="#" data-target="partner" class="nav-link">Clients</a></li>
-  <li class="nav-item"><a href="#" data-target="contact" class="nav-link">Contacts</a></li>
-</ul>
+      <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a href="#" data-target="service" class="nav-link">Services</a>
+        <div class="dropdown-content">
+          <a href="services/bookkeeping.html">Bookkeeping & Financial Reporting</a>
+          <a href="services/tax.html">Tax Consultancy</a>
+          <a href="services/registration.html">Registration, Compliance & Applications</a>
+          <a href="services/website-design.html">Website Design & Development</a>
+          <a href="services/digital-marketing.html">Digital Marketing & Creative Writing</a>
+          <a href="services/branding.html">Branding, Printing & Promotion</a>
+          <a href="services/training.html">Training & Capacity Building</a>
+          <a href="services/survey.html">Survey, Data Analysis & Impact Studies</a>
+        </div>
+      </li>
 
-  
+      <li class="nav-item"><a href="#" data-target="partner" class="nav-link">Clients</a></li>
+      <li class="nav-item"><a href="#" data-target="contact" class="nav-link">Contacts</a></li>
+    </ul>
+  </nav>
 </header>
+
+<script>
+  // Hamburger toggle
+  const menuToggle = document.getElementById('mobile-menu');
+  const navMenu = document.querySelector('.nav-menu');
+
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+  });
+
+  // Sticky header shadow on scroll
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('.sticky-header');
+    if (window.scrollY > 20) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+</script>
+
+
+
+
 
  <main>
 
 <!-- Hero Section -->
 <section class="hero-section" id="home">
-  <!-- Background image -->
-  <div class="hero-bg" style="background-image: url('images/hero-image.jpg');"></div>
-  
-  <!-- Overlay -->
+  <div class="hero-bg" style="background-image: url('images/bg2.jpg');"></div>
   <div class="overlay"></div>
 
-  <div class="container hero-content text-center">
-    <h2 class="hero-title">Welcome to Our Company</h2>
-    <h3 class="subtitle">
-      Start Your <span class="white-text">Beautiful</span> 
-      And <span class="highlight">Bright Future </span>
-    </h3>
+  <div class="hero-content">
+    <h2 class="hero-title">
+      Building Stronger Businesses Across Tanzania <span class="sub-title">and Beyond.</span> 
+    </h2>
+
     <p class="description">
-      We empower individuals and businesses to thrive by delivering expert business
-      management, statistics, and consulting services tailored to your unique needs.
+   Whether you're a startup finding your footing or an established
+    organization aiming higher, our mission is to help you build, grow,
+     and lead  with confidence. From tax and compliance to branding and digital strategy, we help companies make confident moves 
+     and <span class="highlight">achieve lasting growth.</span> 
     </p>
-    <div class="buttons mt-4">
-      <a href="#partner" class="btn btn-gold">Explore Our Services</a>
+
+    <div class="buttons mt-2">
+      <a href="#service" class="btn btn-gold">Explore Our Services</a>
       <a href="#contact" class="btn btn-outline-light">Contact Us</a>
     </div>
   </div>
 </section>
-
-
-
 
 
 
@@ -129,7 +147,7 @@
     <!-- Right Side: Team Image -->
     <div class="about-right">
     <div class="team-photo-frame">
-      <img src="images/team.jpg" alt="Our Team" class="team-photo">
+      <img src="images/office.jpg" alt="Our Team" class="team-photo">
     </div>
 
 
@@ -301,9 +319,8 @@
   <!-- Section Header -->
   <div class="services-header">
     <div class="overlay">
-      <h5>Our Services</h5>
       <h1>What We Do</h1>
-      <p><a href="#">Home</a> / Our Services</p>
+     
     </div>
   </div>
 
@@ -312,7 +329,7 @@
     <h2>Solutions That Drive  <span class="service-intro-title">Growth</span> </h2>
     <div class="intro-divider"></div>
     <p>
-      At <strong>MHS Consults</strong>, we don’t just provide services — we solve problems and 
+     We don’t just provide services, we solve problems and 
       create opportunities. From finances and compliance to digital growth and branding, 
       our team is committed to helping businesses operate efficiently, stay compliant, 
       and build a strong presence in today’s competitive market.
@@ -338,7 +355,7 @@
       <img src="images/Tax Consultancy/images/1.jpg" alt="Tax Consultancy" class="service-img">
       <div class="service-content">
         <div class="service-icon"><i class="fas fa-coins"></i></div>
-        <h3>Tax Consultancy</h3>
+        <h3>Tax Consultancy</h3><br><br>
         <p>Smart tax planning, filing, and compliance solutions. Stay ahead of deadlines and avoid costly penalties.</p>
         <a href="services/tax.html" class="btn-service">Read More</a>
       </div>
@@ -360,7 +377,7 @@
       <img src="images/Website Designing/Images/web-design-2038872_1280.jpg" alt="Website Design" class="service-img">
       <div class="service-content">
         <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
-        <h3>Website Design & Development</h3>
+        <br><h3>Website Design & Development</h3>
         <p>Modern, responsive, and user-friendly websites. Designed to showcase your brand and drive real results.</p>
         <a href="services/website-design.html" class="btn-service">Read More</a>
       </div>
@@ -386,7 +403,7 @@
         <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
         <h3>Branding, Printing & Promotion</h3>
         <p>Professional designs and promotional materials that stand out. Leave a lasting impression everywhere your brand appears.</p>
-        <a href="services/branding.html" class="btn-service">Read More</a>
+       <br> <a href="services/branding.html" class="btn-service">Read More</a>
       </div>
     </div>
 
@@ -395,9 +412,9 @@
       <img src="images/Training and Capacity Building/images/1.jpg" alt="Training" class="service-img">
       <div class="service-content">
         <div class="service-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-        <h3>Training & Capacity Building</h3>
+        <h3>Training & <br>Capacity Building</h3>
         <p>Practical programs that equip teams and individuals with skills. Learn, adapt, and perform better in a changing world.</p>
-        <a href="services/training.html" class="btn-service">Read More</a>
+        <br><a href="services/training.html" class="btn-service">Read More</a>
       </div>
     </div>
 
@@ -410,7 +427,7 @@
         <div class="service-icon"><i class="fas fa-poll"></i></div>
         <h3>Survey, Data Analysis & Impact Studies</h3>
         <p>Data-driven insights for better decisions. Our research and reports give you the evidence to act with confidence.</p>
-        <a href="services/survey.html" class="btn-service">Read More</a>
+       <br> <a href="services/survey.html" class="btn-service">Read More</a>
       </div>
     </div>
 
@@ -419,15 +436,19 @@
   </div>
 
   <!-- Bottom CTA -->
-  <div class="every-business-container">
-    <div class="every-business">
-      <div class="every-business-text">
-        <h2>We have a service for every business</h2>
-        <p>Whether you're a startup, SME, or large enterprise, we tailor our services to meet your unique needs.</p>
-      </div>
+<div class="every-business-container">
+  <div class="every-business">
+    <div class="every-business-text">
+      <h2>We have a service for every business</h2>
+      <p>
+        Whether you're a startup, SME, or large enterprise, we tailor our services
+        to meet your unique needs.
+      </p>
       <a href="#contact" class="btn btn-gold">Get in Touch</a>
     </div>
   </div>
+</div>
+
 
 <script>
   document.querySelectorAll('.btn-service').forEach(link => {
@@ -453,7 +474,7 @@
   <div class="partner-container">
     <!-- ===== Our Clients ===== -->
     <div class="partner-header">
-      <h2 class="partner-title">OUR CLIENTS</h2>
+      <h2 class="partner-title">OUR <span>CLIENTS</span></h2>
       <p class="partner-subtitle">
         We’re dedicated to initiatives with enduring impact—endeavors that
         propel our clients forward in their markets and throughout Africa.
@@ -593,18 +614,22 @@
     }
   });
 
-  // Certifications Toggle
-  function toggleCertificates() {
-    const certs = document.getElementById("certificates");
-    const btn = document.getElementById("cert-btn");
-    if (certs.style.display === "block") {
-      certs.style.display = "none";
-      btn.textContent = "View Our Certifications";
-    } else {
-      certs.style.display = "block";
-      btn.textContent = "Our Certifications";
-    }
+
+function toggleCertificates() {
+  const section = document.getElementById("certificates");
+  const btn = document.getElementById("cert-btn");
+
+  // Toggle visible class
+  section.classList.toggle("certificates-visible");
+
+  // Change button text dynamically
+  if (section.classList.contains("certificates-visible")) {
+    btn.textContent = "Hide Certifications";
+  } else {
+    btn.textContent = "View Our Certifications";
   }
+}
+
 </script>
 
 <section class="contact-section" id="contact">
@@ -706,12 +731,13 @@
     <!-- Quick Links -->
     <div class="footer-col">
       <h4>Quick Links</h4>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Why Choose Us</a></li>
-        <li><a href="#">Contact</a></li>
+     <ul>
+      <li><a href="index.html#home" class="nav-link" data-target="home">Home</a></li>
+<li><a href="index.html#about" class="nav-link" data-target="about">About Us</a></li>
+<li><a href="index.html#service" class="nav-link" data-target="service">Services</a></li>
+<li><a href="index.html#partner" class="nav-link" data-target="partner">Clients</a></li>
+<li><a href="index.html#contact" class="nav-link" data-target="contact">Contacts</a></li>
+
       </ul>
     </div>
 
@@ -751,6 +777,23 @@
 <script>
   window.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add("loaded");
+
+
+  
+  document.querySelector('.nav-logo a').addEventListener('click', function(e) {
+    e.preventDefault(); // prevent default jump
+    const target = document.querySelector('#home');
+    const headerOffset = 120; // adjust based on your fixed header height
+    const elementPosition = target.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  });
+
+
   });
 </script>
 
