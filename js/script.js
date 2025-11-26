@@ -1,30 +1,108 @@
-// Hamburger toggle
-const menuToggle = document.getElementById('menu-toggle');
-const navUl = document.getElementById('nav-ul');
-const toggleIcon = menuToggle.querySelector('i');
+const dropdown = document.querySelector(".dropdown");
+const servicesLink = document.querySelector(".services-link");
+const megaMenu = document.getElementById("megaMenu");
+const menuToggle = document.querySelector(".menu-toggle");
+const navUl = document.querySelector("nav ul");
 
-menuToggle.addEventListener('click', () => {
-  navUl.classList.toggle('active');
-  toggleIcon.classList.toggle('fa-bars');
-  toggleIcon.classList.toggle('fa-times');
-});
+/* -----------------------------
+   DESKTOP DROPDOWN (Hover)
+------------------------------ */
+function handleHover() {
+  if (window.innerWidth > 992) {
+    megaMenu.classList.add("show");
+  }
+}
 
-// Mobile dropdown toggle
-const dropdownLink = document.querySelector('li.dropdown > a');
-dropdownLink.addEventListener('click', (e) => {
-  if(window.innerWidth <= 992){
+function handleLeave() {
+  if (window.innerWidth > 992) {
+    megaMenu.classList.remove("show");
+  }
+}
+
+/* -----------------------------
+   MOBILE DROPDOWN (Tap)
+------------------------------ */
+function toggleMobileDropdown(e) {
+  if (window.innerWidth <= 992) {
     e.preventDefault();
-    dropdownLink.parentElement.classList.toggle('active');
+    megaMenu.classList.toggle("show");
+  }
+}
+
+/* -----------------------------
+   MOBILE MENU TOGGLE
+   (Hamburger → X)
+------------------------------ */
+menuToggle.addEventListener("click", () => {
+  navUl.classList.toggle("active");
+
+  if (navUl.classList.contains("active")) {
+    menuToggle.innerHTML = "&times;"; // X
+  } else {
+    menuToggle.innerHTML = "&#9776;"; // Hamburger
+    megaMenu.classList.remove("show"); // Close dropdown on close
   }
 });
 
-// Sticky header shadow
-const header = document.querySelector('header');
-window.addEventListener('scroll', () => {
-  if(window.scrollY > 10) header.classList.add('scrolled');
-  else header.classList.remove('scrolled');
+/* -----------------------------
+   RESET ON RESIZE
+------------------------------ */
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 992) {
+    // Reset for desktop
+    navUl.classList.remove("active");
+    megaMenu.classList.remove("show");
+    menuToggle.innerHTML = "&#9776;";
+  }
 });
- // end of navlink
+
+/* -----------------------------
+   EVENT LISTENERS
+------------------------------ */
+if (dropdown) {
+  dropdown.addEventListener("mouseenter", handleHover);
+  dropdown.addEventListener("mouseleave", handleLeave);
+  servicesLink.addEventListener("click", toggleMobileDropdown);
+}
+
+// Close dropdown when a menu link is clicked on mobile
+document.querySelectorAll(".dropdown-menu a").forEach(item => {
+  item.addEventListener("click", () => {
+    if (window.innerWidth <= 992) {
+      megaMenu.classList.remove("show");
+      navUl.classList.remove("active");
+      menuToggle.innerHTML = "&#9776;";
+    }
+  });
+});
+
+//active link switch on scroll
+// Highlight active nav link on scroll
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('nav ul li a');
+
+window.addEventListener('scroll', () => {
+  let scrollY = window.pageYOffset;
+
+  sections.forEach(section => {
+    const sectionHeight = section.offsetHeight;
+    const sectionTop = section.offsetTop - 100; // offset for header
+    const sectionId = section.getAttribute('id');
+
+    if(scrollY >= sectionTop && scrollY < sectionTop + sectionHeight){
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if(link.getAttribute('href') === '#' + sectionId){
+          link.classList.add('active');
+        }
+      });
+    }
+  });
+});
+
+
+
+// end of navlink
 
 
 // hero section
@@ -99,3 +177,21 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// document.addEventListener('DOMContentLoaded', function() {
+//   const modal = document.getElementById('partnerModal');
+//   const btn = document.getElementById('partnerBtn');
+//   const closeBtn = document.querySelector('.close-btn');
+
+//   btn.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     modal.style.display = 'flex';
+//   });
+
+//   closeBtn.addEventListener('click', () => {
+//     modal.style.display = 'none';
+//   });
+
+//   window.addEventListener('click', (e) => {
+//     if (e.target === modal) modal.style.display = 'none';
+//   });
+// });

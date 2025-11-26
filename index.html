@@ -43,45 +43,30 @@
     </div>
 
     <ul id="nav-ul">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About Us</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+
       <li class="dropdown">
-        <a href="#">Services <i class="fas fa-caret-down"></i></a>
-        <div class="dropdown-menu">
+        <a href="#service" class="services-link">Services <i class="fas fa-caret-down"></i></a>
+
+        <div class="dropdown-menu" id="megaMenu">
           <ul>
-            <li>
-              <a href="pages/export_advisory.html"><span class="icon"><i class="fas fa-user-tie"></i></span> Export Advisory & Consultancy</a>
-            </li>
-            <li>
-              <a href="pages/crop_sourcing.html"><span class="icon"><i class="fas fa-seedling"></i></span> Crop Sourcing & Procurement</a>
-            </li>
-            <li>
-              <a href="pages/supplier_sorcing.html"><span class="icon"><i class="fas fa-search"></i></span> Supplier Sourcing & Verification</a>
-            </li>
-            <li>
-              <a href="pages/market_linkage.html"><span class="icon"><i class="fas fa-handshake"></i></span> Market Linkage & Trade Facilitation</a>
-            </li>
-            <li>
-              <a href="pages/export_documentaion.html"><span class="icon"><i class="fas fa-file-alt"></i></span> Export Documentation & Compliance</a>
-            </li>
-            <li>
-              <a href="pages/logistics.html"><span class="icon"><i class="fas fa-truck"></i></span> Logistics & Shipping Coordination</a>
-            </li>
-            <li>
-              <a href="pages/quality_inspection.html"><span class="icon"><i class="fas fa-certificate"></i></span> Quality Inspection & Certification</a>
-            </li>
-            <li>
-              <a href="pages/product_branding.html"><span class="icon"><i class="fas fa-box-open"></i></span> Product Branding & Promotion</a>
-            </li>
-            <li>
-              <a href="pages/capacity_building.html"><span class="icon"><i class="fas fa-chalkboard-teacher"></i></span> Capacity Building & Export Training</a>
-            </li>
+            <li><a href="pages/export_advisory.html"><span class="icon"><i class="fas fa-user-tie"></i></span> Export Advisory & Consultancy</a></li>
+            <li><a href="pages/crop_sourcing.html"><span class="icon"><i class="fas fa-seedling"></i></span> Crop Sourcing & Procurement</a></li>
+            <li><a href="pages/supplier_sorcing.html"><span class="icon"><i class="fas fa-search"></i></span> Supplier Sourcing & Verification</a></li>
+            <li><a href="pages/market_linkage.html"><span class="icon"><i class="fas fa-handshake"></i></span> Market Linkage & Trade Facilitation</a></li>
+            <li><a href="pages/export_documentaion.html"><span class="icon"><i class="fas fa-file-alt"></i></span> Export Documentation & Compliance</a></li>
+            <li><a href="pages/logistics.html"><span class="icon"><i class="fas fa-truck"></i></span> Logistics & Shipping Coordination</a></li>
+            <li><a href="pages/quality_inspection.html"><span class="icon"><i class="fas fa-certificate"></i></span> Quality Inspection & Certification</a></li>
+            <li><a href="pages/product_branding.html"><span class="icon"><i class="fas fa-box-open"></i></span> Product Branding & Promotion</a></li>
+            <li><a href="pages/capacity_building.html"><span class="icon"><i class="fas fa-chalkboard-teacher"></i></span> Capacity Building & Export Training</a></li>
           </ul>
         </div>
       </li>
-      <li><a href="#">Markets</a></li>
-      <li><a href="#">Partnerships</a></li>
-      <li><a href="#">Contact</a></li>
+    <li><a href="#partner">Partners</a></li>
+      <li><a href="#market">Markets</a></li>
+     
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 </header>
@@ -89,7 +74,7 @@
 
 
 <!-- hero section -->
-<section class="hero">
+<section class="hero" id="home">
   <div class="hero-overlay"></div>
 
   <div class="hero-container">
@@ -107,8 +92,8 @@
 
     <!-- CTA Buttons -->
     <div class="hero-cta">
-      <a href="#services" class="btn btn-primary">Explore Our Services</a>
-      <a href="#partner" class="btn btn-outline">Partner With Us</a>
+      <a href="#service" class="btn btn-primary">Explore Our Services</a>
+      <a href="#collaboration" class="btn btn-outline">Partner With Us</a>
       <a href="#contact" class="btn btn-green">Contact CropLink</a>
     </div>
 
@@ -134,7 +119,7 @@
         exporter can compete confidently in global markets through professionalism, transparency, and strong partnerships.
       </p>
 
-      <a href="/about" class="about-btn">Read More About Us →</a>
+      <a href="pages/about-us.html" class="about-btn">Read More About Us →</a>
     </div>
 
     <div class="about-right">
@@ -146,134 +131,100 @@
   </div>
 </section>
 
-<!-- service section -->
-
-<section class="what-we-do py-5">
+<section class="what-we-do" id="service">
     <div class="container">
-        <div class="text-center mb-5">
+        <!-- Premium Header -->
+        <div class="section-header">
             <h2 class="section-title">What We Do</h2>
             <p class="section-subtitle">
-                End-to-end agricultural export support — connecting Tanzania’s crops to global markets.
+                End-to-end agricultural export support, connecting Tanzania’s crops to global markets.
             </p>
+            <hr class="section-divider">
         </div>
 
-        <div class="row g-4">
+        <div class="services-grid">
 
-            <!-- Service Item -->
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <img src="images/services/advisory.jpeg" class="service-img" alt="Export Advisory">
-                    <h4>Export Advisory & Consultancy</h4>
-                    <p>
-                        Expert support to help exporters understand market requirements, compliance,
-                        risk management, and strategic market planning.
-                    </p>
-                </div>
+            <!-- Service 1 -->
+            <div class="service-item">
+                <img src="images/new/Export Advisory.webp" class="service-img" alt="Export Advisory">
+                <h4>Export Advisory & Consultancy</h4>
+                <p>Expert support to help exporters understand market requirements, compliance, risk management, and strategic market planning.</p>
+                <a href="pages/export_advisory.html" class="btn-service">Learn More</a>
             </div>
 
-            <!-- Service Item -->
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <img src="images/services/crop_sorcing.jpeg" class="service-img" alt="Crop Sourcing">
-                    <h4>Crop Sourcing & Procurement</h4>
-                    <p>
-                        Field-level aggregation of sesame, cashew nuts, legumes, cereals, spices,
-                        and avocados from verified farmers across Tanzania.
-                    </p>
-                </div>
+            <!-- Service 2 -->
+            <div class="service-item">
+                <img src="images/new/Crop sourcing and Procurement.webp" class="service-img" alt="Crop Sourcing">
+                <h4>Crop Sourcing & Procurement</h4>
+                <p>Field-level aggregation of sesame, cashew nuts, legumes, cereals, spices, and avocados from verified farmers across Tanzania.</p>
+                <a href="pages/crop_sourcing.html" class="btn-service">Learn More</a>
             </div>
 
-            <!-- Service Item -->
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <img src="images/services/verification.jpg" class="service-img" alt="Supplier Verification">
-                    <h4>Supplier Sourcing & Verification</h4>
-                    <p>
-                        We connect global buyers with verified Tanzanian suppliers to ensure transparency
-                        and trust in every trade transaction.
-                    </p><br>
-                </div>
+            <!-- Service 3 -->
+            <div class="service-item">
+                <img src="images/services/supplier.jpg" class="service-img" alt="Supplier Verification">
+                <h4>Supplier Sourcing & Verification</h4>
+                <p>We connect global buyers with verified Tanzanian suppliers to ensure transparency and trust in every trade transaction.</p>
+                <a href="pages/supplier_sorcing.html" class="btn-service">Learn More</a>
             </div>
 
-            <!-- Service Item -->
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <img src="images/services/linkage1.jpeg" class="service-img" alt="Market Linkage">
-                    <h4>Market Linkage & Trade Facilitation</h4>
-                    <p>
-                        Bridging Tanzanian exporters with global markets by coordinating deals, communication,
-                        and trade negotiations.
-                    </p><br>
-                </div>
+            <!-- Service 4 -->
+            <div class="service-item">
+                <img src="images/services/Market Linkage (1).jpg" class="service-img" alt="Market Linkage">
+                <h4>Market Linkage & Trade Facilitation</h4>
+                <p>Bridging Tanzanian exporters with global markets by coordinating deals, communication, and trade negotiations.</p>
+                <a href="pages/market_linkage.html" class="btn-service">Learn More</a>
             </div>
 
-            <!-- Service Item -->
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <img src="images/services/Export Documentation.jpg" class="service-img" alt="Documentation">
-                    <h4>Export Documentation & Compliance</h4>
-                    <p>
-                        Accurate preparation of export documents including certificates, contracts, and customs
-                        paperwork for seamless clearance.
-                    </p>
-                </div>
+            <!-- Service 5 -->
+            <div class="service-item">
+                <img src="images/new/Export documentation.jpg" class="service-img" alt="Documentation">
+                <h4>Export Documentation & Compliance</h4>
+                <p>Accurate preparation of export documents including certificates, contracts, and customs paperwork for seamless clearance.</p>
+                <a href="pages/export_documentaion.html" class="btn-service">Learn More</a>
             </div>
 
-            <!-- Service Item -->
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <img src="images/logistics.jpg" class="service-img" alt="Logistics">
-                    <h4>Logistics & Shipping Coordination</h4>
-                    <p>
-                        From factory to port, we manage transport, freight booking, cargo consolidation,
-                        and shipping processes.
-                    </p>
-                </div>
+            <!-- Service 6 -->
+            <div class="service-item">
+                <img src="images/new/Logistic Shipping coordination.jpg" class="service-img" alt="Logistics">
+                <h4>Logistics & Shipping Coordination</h4>
+                <p>From factory to port, we manage transport, freight booking, cargo consolidation, and shipping processes.</p>
+                <a href="pages/logistics.html" class="btn-service">Learn More</a>
             </div>
 
-            <!-- Service Item -->
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <img src="images/inspection.jpg" class="service-img" alt="Inspection">
-                    <h4>Quality Inspection & Certification</h4>
-                    <p>
-                        Pre-shipment inspection, grading, moisture testing, and certification to meet
-                        international buyer standards.
-                    </p>
-                </div>
+            <!-- Service 7 -->
+            <div class="service-item">
+                <img src="images/new/Quality Inspection.webp" class="service-img" alt="Inspection">
+                <h4>Quality Inspection & Certification</h4>
+                <p>Pre-shipment inspection, grading, moisture testing, and certification to meet international buyer standards.</p>
+                <a href="pages/quality_inspection.html" class="btn-service">Learn More</a>
             </div>
 
-            <!-- Service Item -->
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <img src="images/branding.jpg" class="service-img" alt="Branding">
-                    <h4>Product Branding & Export Promotion</h4>
-                    <p>
-                        Helping exporters build strong product identities through branding, packaging,
-                        and global promotion.
-                    </p>
-                </div>
+            <!-- Service 8 -->
+            <div class="service-item">
+                <img src="images/new/Product branding2.webp" class="service-img" alt="Branding">
+                <h4>Product Branding & Export Promotion</h4>
+                <p>Helping exporters build strong product identities through branding, packaging, and global promotion.</p>
+                <a href="pages/product_branding.html" class="btn-service">Learn More</a>
             </div>
 
-            <!-- Service Item -->
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <img src="images/training.jpg" class="service-img" alt="Training">
-                    <h4>Capacity Building & Export Training</h4>
-                    <p>
-                        Training exporters, farmers, and processors on compliance, documentation, quality
-                        control and value addition.
-                    </p>
-                </div>
+            <!-- Service 9 -->
+            <div class="service-item">
+                <img src="images/new/Capacity Building.webp" class="service-img" alt="Training">
+                <h4>Capacity Building & Export Training</h4>
+                <p>Training exporters, farmers, and processors on compliance, documentation, quality control, and value addition.</p>
+                <a href="pages/capacity_building.html" class="btn-service">Learn More</a>
             </div>
 
         </div>
     </div>
 </section>
 
+
+
   <!-- end of service section -->
 
-<section class="impact-gradient">
+<section class="impact-gradient" id="service">
   <div class="impact-inner">
 
     <!-- Header -->
@@ -311,7 +262,115 @@
 </section>
 
 
-<section class="partnerships">
+<section class="services-banner">
+  <div class="container py-5">
+    <div class="row g-4 align-items-center">
+
+      <!-- LEFT CONTENT -->
+      <div class="col-lg-7">
+        <h1 class="main-title">
+          Comprehensive Export Solutions
+          <span>Starting From Farm to Global Market</span>
+        </h1>
+
+        <p class="subtitle">
+          A single partner for sourcing, compliance, logistics, and promotion.
+        </p>
+
+        <p>
+          <strong>CropLink</strong> offers end-to-end export services tailored to Tanzanian producers, processors, and exporters. 
+          Our integrated model ensures a smooth journey from field to port to global buyer through technical expertise, 
+          institutional alignment, and real ground-level execution.
+        </p>
+
+        <h5 class="services-heading">All Services</h5>
+
+        <div class="row">
+          
+          <!-- LEFT LIST -->
+          <div class="col-md-6">
+            <ul class="service-list">
+              <li>
+                <a href="#" class="service-items">
+                  <i class="fa-solid fa-check"></i>
+                  Export Advisory & Consultancy
+                </a>
+              </li>
+              <li>
+                <a href="#" class="service-items">
+                  <i class="fa-solid fa-check"></i>
+                  Crop Sourcing & Procurement
+                </a>
+              </li>
+              <li>
+                <a href="#" class="service-items">
+                  <i class="fa-solid fa-check"></i>
+                  Supplier Sourcing & Verification
+                </a>
+              </li>
+              <li>
+                <a href="#" class="service-items">
+                  <i class="fa-solid fa-check"></i>
+                  Market Linkage & Trade Facilitation
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- RIGHT LIST -->
+          <div class="col-md-6">
+            <ul class="service-list">
+              <li>
+                <a href="#" class="service-items">
+                  <i class="fa-solid fa-check"></i>
+                  Export Documentation & Compliance
+                </a>
+              </li>
+              <li>
+                <a href="#" class="service-items">
+                  <i class="fa-solid fa-check"></i>
+                  Logistics & Shipping Coordination
+                </a>
+              </li>
+              <li>
+                <a href="#" class="service-items">
+                  <i class="fa-solid fa-check"></i>
+                  Quality Inspection & Certification
+                </a>
+              </li>
+              <li>
+                <a href="#" class="service-items">
+                  <i class="fa-solid fa-check"></i>
+                  Product Branding & Promotion
+                </a>
+              </li>
+              <li>
+                <a href="#" class="service-items">
+                  <i class="fa-solid fa-check"></i>
+                  Capacity Building & Export Training
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="col-lg-5">
+        <div class="image-box">
+          <img src="images/export_services1.jpg" 
+               alt="Export Services" 
+               class="img-fluid">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="partnerships" id="partner">
   <div class="partners-container">
 
     <!-- Top Two Columns -->
@@ -343,141 +402,59 @@
 
     <!-- Partner Logos Grid -->
     <div class="partners-logos">
-      <h3>Institutional Partners</h3>
-      <div class="partners-grid">
-        <!-- Example logos (replace with actual logos) -->
-        <img src="logos/ministry-agriculture.png" alt="Ministry of Agriculture">
-        <img src="logos/ministry-investment.png" alt="Ministry of Investment, Industry & Trade">
-        <img src="logos/tra.png" alt="TRA">
-        <img src="logos/tbs.png" alt="TBS">
-        <img src="logos/tmda.png" alt="TMDA">
-        <img src="logos/tphpa.png" alt="TPHPA">
-        <img src="logos/cbt.png" alt="CBT">
-        <img src="logos/tadb.png" alt="TADB">
-        <img src="logos/nmb.png" alt="NMB">
-        <img src="logos/crdb.png" alt="CRDB">
-        <img src="logos/giz.png" alt="GIZ">
-        <img src="logos/sagcot.png" alt="SAGCOT">
-        <img src="logos/tpsf.png" alt="TPSF">
-        <img src="logos/tccia.png" alt="TCCIA">
-      </div>
+  <h3>Institutional Partners</h3>
+  <div class="partners-grid">
+    <div class="partner-card">
+      <img src="images/partner_logo/Ministry of Agriculture.png" alt="Ministry of Agriculture">
     </div>
+    <div class="partner-card">
+      <img src="images/partner_logo/Ministry of Investment, Industry & Trade.png" alt="Ministry of Investment, Industry & Trade">
+    </div>
+    <div class="partner-card">
+      <img src="images/partner_logo/TRA.png" alt="TRA">
+    </div>
+    <div class="partner-card">
+      <img src="images/partner_logo/TBS.png" alt="TBS">
+    </div>
+    <div class="partner-card">
+      <img src="images/partner_logo/TMDA.png" alt="TMDA">
+    </div>
+    <div class="partner-card">
+      <img src="images/partner_logo/TPHPA.png" alt="TPHPA">
+    </div>
+    <div class="partner-card">
+      <img src="images/partner_logo/CBT.png" alt="CBT">
+    </div>
+    <div class="partner-card">
+      <img src="images/partner_logo/TADB.png" alt="TADB">
+    </div>
+    <div class="partner-card">
+      <img src="images/partner_logo/NMB.png" alt="NMB">
+    </div>
+    <div class="partner-card">
+      <img src="images/partner_logo/CRDB.png" alt="CRDB">
+    </div>
+    <div class="partner-card">
+      <img src="images/partner_logo/GIZ.png" alt="GIZ">
+    </div>
+    <div class="partner-card">
+      <img src="images/partner_logo/SAGCOT.png" alt="SAGCOT">
+    </div>
+    <div class="partner-card">
+      <img src="images/partner_logo/TPSF.png" alt="TPSF">
+    </div>
+    <div class="partner-card">
+      <img src="images/partner_logo/TCCIA.png" alt="TCCIA">
+    </div>
+  </div>
+</div>
 
   </div>
 </section>
 
-
-
-
-<section class="services-banner">
-  <div class="container py-5">
-    <div class="row g-4 align-items-center">
-
-      <!-- LEFT CONTENT -->
-      <div class="col-lg-7">
-        <h1 class="main-title">
-          Comprehensive Export Solutions
-          <span>Starting From Farm to Global Market</span>
-        </h1>
-
-        <p class="subtitle">
-          A single partner for sourcing, compliance, logistics, and promotion.
-        </p>
-
-        <p>
-          <strong>CropLink</strong> offers end-to-end export services tailored to Tanzanian producers, processors, and exporters. 
-          Our integrated model ensures a smooth journey from field to port to global buyer through technical expertise, 
-          institutional alignment, and real ground-level execution.
-        </p>
-
-        <h5 class="services-heading">All Services</h5>
-
-        <div class="row">
-          
-          <!-- LEFT LIST -->
-          <div class="col-md-6">
-            <ul class="service-list">
-              <li>
-                <a href="#" class="service-item">
-                  <i class="fa-solid fa-check"></i>
-                  Export Advisory & Consultancy
-                </a>
-              </li>
-              <li>
-                <a href="#" class="service-item">
-                  <i class="fa-solid fa-check"></i>
-                  Crop Sourcing & Procurement
-                </a>
-              </li>
-              <li>
-                <a href="#" class="service-item">
-                  <i class="fa-solid fa-check"></i>
-                  Supplier Sourcing & Verification
-                </a>
-              </li>
-              <li>
-                <a href="#" class="service-item">
-                  <i class="fa-solid fa-check"></i>
-                  Market Linkage & Trade Facilitation
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- RIGHT LIST -->
-          <div class="col-md-6">
-            <ul class="service-list">
-              <li>
-                <a href="#" class="service-item">
-                  <i class="fa-solid fa-check"></i>
-                  Export Documentation & Compliance
-                </a>
-              </li>
-              <li>
-                <a href="#" class="service-item">
-                  <i class="fa-solid fa-check"></i>
-                  Logistics & Shipping Coordination
-                </a>
-              </li>
-              <li>
-                <a href="#" class="service-item">
-                  <i class="fa-solid fa-check"></i>
-                  Quality Inspection & Certification
-                </a>
-              </li>
-              <li>
-                <a href="#" class="service-item">
-                  <i class="fa-solid fa-check"></i>
-                  Product Branding & Promotion
-                </a>
-              </li>
-              <li>
-                <a href="#" class="service-item">
-                  <i class="fa-solid fa-check"></i>
-                  Capacity Building & Export Training
-                </a>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- RIGHT IMAGE -->
-      <div class="col-lg-5">
-        <div class="image-box">
-          <img src="images/export_services1.jpg" 
-               alt="Export Services" 
-               class="img-fluid">
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 <!-- CROPLINK MARKETS SECTION – PREMIUM STYLE MATCHING HERO SAMPLE -->
-<section class="markets-premium">
+<section class="markets-premium" id="market">
   <div class="markets-container">
     <div class="markets-left">
       <!-- <h2 class="markets-title">MARKETS PAGE</h2> -->
@@ -503,12 +480,11 @@
 
 
 <!-- CONTACT SECTION -->
-<section class="contact-section">
+<section class="contact-section" id="contact">
     <div class="container">
 
         <!-- PREMIUM HEADER -->
         <div class="contact-header">
-         
             <h2>Let’s Build Tanzania’s Global Link Together</h2>
             <p>
                 Whether you're a farmer, exporter, buyer, or strategic partner, CropLink is ready 
@@ -518,7 +494,7 @@
 
         <div class="grid">
 
-            <!-- LEFT: NEW PREMIUM CONTACT INFO -->
+            <!-- LEFT CONTACT INFO -->
             <div class="contact-card upgraded">
                 <h3>Contact Information</h3>
 
@@ -561,11 +537,10 @@
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
-                
                 </div>
             </div>
 
-            <!-- RIGHT CONTACT FORM (unchanged) -->
+            <!-- RIGHT: CONTACT FORM -->
             <div class="form-card">
                 <form id="contactForm">
                     <div class="field-group">
@@ -608,6 +583,53 @@
 
     </div>
 </section>
+
+<section id="collaboration" class="collaboration-section">
+  <div class="container">
+    <h2 class="text-center mb-4">Request a Collaboration</h2>
+
+    <form>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Full Name <span class="required">*</span></label>
+          <input type="text" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label>Email Address <span class="required">*</span></label>
+          <input type="email" placeholder="Enter your email" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Company Name <span class="required">*</span></label>
+          <input type="text" placeholder="Your company" required>
+        </div>
+
+        <div class="form-group">
+          <label>Phone Number <span class="required">*</span></label>
+          <input type="text" placeholder="+255 767 983 236" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Message <span class="required">*</span></label>
+        <textarea rows="4" placeholder="Write your message..." required></textarea>
+      </div>
+
+      <button type="submit">Submit</button>
+
+    </form>
+
+  </div>
+</section>
+
+
+
+
+
 
 
 <footer class="footer-section">
@@ -669,5 +691,37 @@
 
 
 <script src="js/script.js"></script>
+
+
+<!-- Partner Form Modal -->
+<div id="partnerModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Partner With Us</h2>
+    <form id="partnerForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="company">Company Name</label>
+      <input type="text" id="company" name="company" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/255714955004?text=Hi%20there!%20I%20want%20to%20chat%20with%20you" 
+   class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
 </body>
 </html>
