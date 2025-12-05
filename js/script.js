@@ -102,22 +102,6 @@ window.addEventListener("scroll", () => {
   });
 });
 
-/* =======================================================
-   HERO SLIDER TEXT (OLD SLIDER)
-======================================================= */
-const textSlides = document.querySelectorAll(".slider-text .slide");
-let textIndex = 0;
-
-function showNextTextSlide() {
-  if (textSlides.length > 0) {
-    textSlides[textIndex].classList.remove("active");
-    textIndex = (textIndex + 1) % textSlides.length;
-    textSlides[textIndex].classList.add("active");
-  }
-}
-
-setInterval(showNextTextSlide, 4000);
-
 let slideIndex = 0;
 const slides = document.querySelectorAll(".hero-slide");
 
@@ -136,21 +120,22 @@ function moveToSlide(nextIndex) {
   }, 1000);
 
   slides[next].classList.add("active");
-
   slideIndex = next;
 }
 
+/* Arrows */
 document.querySelector(".next").addEventListener("click", () => {
   moveToSlide(slideIndex + 1);
 });
-
 document.querySelector(".prev").addEventListener("click", () => {
   moveToSlide(slideIndex - 1);
 });
 
+/* AUTO SLIDE AFTER 30 SECONDS */
 setInterval(() => {
   moveToSlide(slideIndex + 1);
-}, 7000);
+}, 30000);
+
 
 /* =======================================================
    COUNTER ANIMATION
