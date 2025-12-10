@@ -1,80 +1,80 @@
 /* =======================================================
-   NAVIGATION & MEGA MENU
+   UNIVERSAL NAVIGATION & MEGA MENU SYSTEM
 ======================================================= */
-const dropdown = document.querySelector(".dropdown");
-const servicesLink = document.querySelector(".services-link");
-const megaMenu = document.getElementById("megaMenu");
+
+/* Dropdown Links + Their Mega Menus */
+const dropdownLinks = document.querySelectorAll(".dropdown-link");
 const menuToggle = document.querySelector(".menu-toggle");
 const navUl = document.querySelector("nav ul");
 
-/* -----------------------------
-   DESKTOP DROPDOWN (Hover)
------------------------------- */
-function handleHover() {
-  if (window.innerWidth > 992) {
-    megaMenu.classList.add("show");
-  }
-}
+/* ------------------------------------
+   UNIVERSAL DROPDOWN HANDLING
+------------------------------------ */
+dropdownLinks.forEach(link => {
+  const targetId = link.getAttribute("data-target");
+  const menu = document.getElementById(targetId);
+  const parent = link.parentElement;
 
-function handleLeave() {
-  if (window.innerWidth > 992) {
-    megaMenu.classList.remove("show");
-  }
-}
+  /* Desktop Hover */
+  parent.addEventListener("mouseenter", () => {
+    if (window.innerWidth > 992) {
+      closeAllDropdowns();
+      menu.classList.add("show");
+    }
+  });
 
-/* -----------------------------
-   MOBILE DROPDOWN (Tap)
------------------------------- */
-function toggleMobileDropdown(e) {
-  if (window.innerWidth <= 992) {
-    e.preventDefault();
-    megaMenu.classList.toggle("show");
-  }
-}
+  parent.addEventListener("mouseleave", () => {
+    if (window.innerWidth > 992) {
+      menu.classList.remove("show");
+    }
+  });
 
-/* -----------------------------
-   MOBILE MENU TOGGLE
------------------------------- */
-menuToggle.addEventListener("click", () => {
-  navUl.classList.toggle("active");
-
-  if (navUl.classList.contains("active")) {
-    menuToggle.innerHTML = "&times;";
-  } else {
-    menuToggle.innerHTML = "&#9776;";
-    megaMenu.classList.remove("show");
-  }
+  /* Mobile Tap */
+  link.addEventListener("click", (e) => {
+    if (window.innerWidth <= 992) {
+      e.preventDefault();
+      menu.classList.toggle("show");
+    }
+  });
 });
 
-/* -----------------------------
-   RESET ON RESIZE
------------------------------- */
-window.addEventListener("resize", () => {
-  if (window.innerWidth > 992) {
-    navUl.classList.remove("active");
-    megaMenu.classList.remove("show");
-    menuToggle.innerHTML = "&#9776;";
-  }
-});
-
-/* -----------------------------
-   EVENT LISTENERS FOR MENU
------------------------------- */
-if (dropdown) {
-  dropdown.addEventListener("mouseenter", handleHover);
-  dropdown.addEventListener("mouseleave", handleLeave);
-  servicesLink.addEventListener("click", toggleMobileDropdown);
+/* Close all dropdowns */
+function closeAllDropdowns() {
+  document.querySelectorAll(".dropdown-menu").forEach(m => m.classList.remove("show"));
 }
 
-/* Close dropdown when link is clicked on mobile */
+/* Close dropdown when item is clicked on mobile */
 document.querySelectorAll(".dropdown-menu a").forEach(item => {
   item.addEventListener("click", () => {
     if (window.innerWidth <= 992) {
-      megaMenu.classList.remove("show");
+      closeAllDropdowns();
       navUl.classList.remove("active");
       menuToggle.innerHTML = "&#9776;";
     }
   });
+});
+
+/* ------------------------------------
+   MOBILE MENU TOGGLE
+------------------------------------ */
+menuToggle.addEventListener("click", () => {
+  navUl.classList.toggle("active");
+  closeAllDropdowns();
+
+  menuToggle.innerHTML = navUl.classList.contains("active")
+    ? "&times;"
+    : "&#9776;";
+});
+
+/* ------------------------------------
+   RESET ON RESIZE
+------------------------------------ */
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 992) {
+    navUl.classList.remove("active");
+    closeAllDropdowns();
+    menuToggle.innerHTML = "&#9776;";
+  }
 });
 
 /* =======================================================
@@ -87,11 +87,11 @@ window.addEventListener("scroll", () => {
   let scrollY = window.pageYOffset;
 
   sections.forEach(section => {
-    const sectionHeight = section.offsetHeight;
-    const sectionTop = section.offsetTop - 100;
+    const height = section.offsetHeight;
+    const top = section.offsetTop - 100;
     const id = section.getAttribute("id");
 
-    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+    if (scrollY >= top && scrollY < top + height) {
       navLinks.forEach(link => {
         link.classList.remove("active");
         if (link.getAttribute("href") === "#" + id) {
@@ -102,11 +102,14 @@ window.addEventListener("scroll", () => {
   });
 });
 
+/* =======================================================
+   HERO SLIDER
+======================================================= */
 let slideIndex = 0;
 const slides = document.querySelectorAll(".hero-slide");
 
 function moveToSlide(nextIndex) {
-  let current = slideIndex;
+  const current = slideIndex;
   let next = nextIndex;
 
   if (next >= slides.length) next = 0;
@@ -123,19 +126,18 @@ function moveToSlide(nextIndex) {
   slideIndex = next;
 }
 
-/* Arrows */
 document.querySelector(".next").addEventListener("click", () => {
   moveToSlide(slideIndex + 1);
 });
+
 document.querySelector(".prev").addEventListener("click", () => {
   moveToSlide(slideIndex - 1);
 });
 
-/* AUTO SLIDE AFTER 30 SECONDS */
+/* Auto Slide */
 setInterval(() => {
   moveToSlide(slideIndex + 1);
 }, 30000);
-
 
 /* =======================================================
    COUNTER ANIMATION
@@ -143,13 +145,7 @@ setInterval(() => {
 document.addEventListener("DOMContentLoaded", () => {
   const counters = document.querySelectorAll(".counter");
 
-  const options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.3
-  };
-
-  const callback = (entries, observer) => {
+  const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const counter = entry.target;
@@ -167,13 +163,13 @@ document.addEventListener("DOMContentLoaded", () => {
               target >= 1000 ? target.toLocaleString() + "+" : target + "+";
           }
         };
+
         update();
         observer.unobserve(counter);
       }
     });
-  };
+  }, { threshold: 0.3 });
 
-  const observer = new IntersectionObserver(callback, options);
   counters.forEach(counter => observer.observe(counter));
 });
 
@@ -181,19 +177,21 @@ document.addEventListener("DOMContentLoaded", () => {
    MARKET PAGE – CARD REVEAL
 ======================================================= */
 const cards = document.querySelectorAll(".m-card");
-const reveal = () => {
+
+function revealCards() {
   const trigger = window.innerHeight * 0.85;
+
   cards.forEach(card => {
     const top = card.getBoundingClientRect().top;
     if (top < trigger) card.classList.add("fade-up");
   });
-};
+}
 
-window.addEventListener("scroll", reveal);
-window.addEventListener("load", reveal);
+window.addEventListener("scroll", revealCards);
+window.addEventListener("load", revealCards);
 
 /* =======================================================
-   CONTACT FORM HANDLER
+   CONTACT FORM
 ======================================================= */
 document.getElementById("contactForm")?.addEventListener("submit", function (e) {
   e.preventDefault();
