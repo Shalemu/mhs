@@ -186,7 +186,7 @@ nav ul li.dropdown { position: static; }
 .avocado-banner {
   position: relative;
   height: 380px;
-  background-image: url('images/avocado-banner.jpg');
+  background-image: url('../../images/crops/avocado/avocado\ \(1\).jpg');
   background-size: cover;
   background-position: center;
   border-radius: 0 0 20px 20px;
@@ -199,7 +199,7 @@ nav ul li.dropdown { position: static; }
 .avocado-banner .banner-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0,0,0,0.80);
 }
 
 .banner-content {
@@ -210,8 +210,8 @@ nav ul li.dropdown { position: static; }
 }
 
 .banner-content h1 {
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 40px;
+  font-weight: 800;
   margin-bottom: 15px;
 }
 

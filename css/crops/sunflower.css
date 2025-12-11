@@ -212,7 +212,7 @@ nav ul li.dropdown { position: static; }
   height: 100%;
   background: 
     linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.85)),
-    url('../images/crops/sunflower_banner.jpg') center/cover no-repeat;
+    url('../../images/crops/sunflower/sunflower\ \(5\).jpg') center/cover no-repeat;
   z-index: 1;
 }
 
@@ -220,13 +220,15 @@ nav ul li.dropdown { position: static; }
   position: relative;
   z-index: 2;
   text-align: center;
+    max-width: 900px;
 }
 
 .sunflower_header_content h1 {
   font-size: 50px;
   font-weight: 900;
   margin-bottom: 12px;
-  color: #f4a300;
+  color: #fff;
+
 }
 
 .sunflower_header_content p {
@@ -236,7 +238,7 @@ nav ul li.dropdown { position: static; }
 }
 
 .cta_button_sunflower {
-  background-color: #f4a300;
+  background-color: #327c3d;
   padding: 16px 48px;
   border-radius: 20px;
   font-weight: 700;
@@ -286,7 +288,7 @@ nav ul li.dropdown { position: static; }
   top: 0;
   width: 6px;
   height: 100%;
-  background: linear-gradient(180deg, #f4a300, #327c3d);
+  background: linear-gradient(180deg,#327c3d, #327c3d);
   border-radius: 6px 0 0 6px;
 }
 
@@ -317,7 +319,7 @@ nav ul li.dropdown { position: static; }
 .icon_circle {
   width: 38px;
   height: 38px;
-  background: #f4a300;
+  background: #327c3d;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -369,7 +371,7 @@ nav ul li.dropdown { position: static; }
 }
 
 .availability_table th {
-  background-color: #f4a300;
+  background-color: #327c3d;
   color: #fff;
 }
 

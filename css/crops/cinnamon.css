@@ -189,7 +189,7 @@ nav ul li.dropdown { position: static; }
   position: relative;
   height: 380px;
   width: 100%;
-  background-image: url('images/cinnamon-banner.jpg');
+  background-image: url('../../images/crops/ciamon/cinnamon\ \(1\).jpg');
   background-size: cover;
   background-position: center;
   border-radius: 0 0 20px 20px;
@@ -203,7 +203,7 @@ nav ul li.dropdown { position: static; }
 .cinnamon-banner .banner-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0,0,0,0.80);
 }
 
 .cinnamon-banner .banner-content {
@@ -214,9 +214,10 @@ nav ul li.dropdown { position: static; }
 }
 
 .cinnamon-banner h1 {
-  font-size: 34px;
-  font-weight: 700;
+  font-size: 40px;
+  font-weight: 800;
   margin-bottom: 15px;
+  text-transform: uppercase;
 }
 
 .cinnamon-banner p {

@@ -191,7 +191,7 @@ nav ul li.dropdown { position: static; }
   position: relative;
   height: 380px;
   width: 100%;
-  background-image: url('images/cardamom-banner.jpg'); /* replace with actual image */
+  background-image: url('../../images/crops/cardamon/Cardamom\ \(4\).jpg'); /* replace with actual image */
   background-size: cover;
   background-position: center;
   border-radius: 0 0 20px 20px;
@@ -205,7 +205,7 @@ nav ul li.dropdown { position: static; }
 .cardamom-banner .banner-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0,0,0,0.80);
 }
 
 .cardamom-banner .banner-content {
@@ -216,9 +216,10 @@ nav ul li.dropdown { position: static; }
 }
 
 .cardamom-banner h1 {
-  font-size: 34px;
-  font-weight: 700;
+  font-size: 40px;
+  font-weight: 800;
   margin-bottom: 15px;
+  text-transform: uppercase;
 }
 
 .cardamom-banner p {

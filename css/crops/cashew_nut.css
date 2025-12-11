@@ -215,9 +215,10 @@ nav ul li.dropdown { position: static; }
   height: 100%;
   background: 
     linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.85)),
-    url('../images/crops/cashew-banner.jpg') center/cover no-repeat;
+    url('../../images/crops/cashew/Cashew\ Nuts\ \(3\).jpg') center/cover no-repeat;
   z-index: 1;
 }
+
 
 .cashew_header_content {
   position: relative;

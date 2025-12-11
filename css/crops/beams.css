@@ -190,7 +190,7 @@ nav ul li.dropdown { position: static; }
   position: relative;
   height: 380px;
   width: 100%;
-  background-image: url('images/beans-banner.jpg'); /* replace with actual banner */
+  background-image: url('../../images/crops/beans/beans\ \(1\).jpg'); /* replace with actual banner */
   background-size: cover;
   background-position: center;
   border-radius: 0 0 20px 20px;
@@ -204,7 +204,7 @@ nav ul li.dropdown { position: static; }
 .beans-banner .banner-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0,0,0,0.80);
 }
 
 .beans-banner .banner-content {
@@ -215,9 +215,10 @@ nav ul li.dropdown { position: static; }
 }
 
 .beans-banner h1 {
-  font-size: 34px;
-  font-weight: 700;
+  font-size: 40px;
+  font-weight: 800;
   margin-bottom: 15px;
+  text-transform: uppercase;
 }
 
 .beans-banner p {

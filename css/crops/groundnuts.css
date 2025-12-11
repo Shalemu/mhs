@@ -187,7 +187,7 @@ nav ul li.dropdown { position: static; }
 .groundnut-banner {
   position: relative;
   height: 380px;
-  background-image: url('images/groundnuts-banner.jpg');
+  background-image: url('../../images/crops/groundnuts/groundnuts\ \(3\).jpg');
   background-size: cover;
   background-position: center;
   border-radius: 0 0 20px 20px;
@@ -200,7 +200,7 @@ nav ul li.dropdown { position: static; }
 .banner-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0,0,0,0.85);
 }
 
 .banner-content {
@@ -225,7 +225,7 @@ nav ul li.dropdown { position: static; }
 .banner-cta {
   display: inline-block;
   padding: 14px 28px;
-  background: #e0a100;
+  background: #327c3d;
   color: #fff;
   font-weight: 600;
   border-radius: 6px;
@@ -234,7 +234,7 @@ nav ul li.dropdown { position: static; }
 }
 
 .banner-cta:hover {
-  background: #c48c00;
+  background: #327c3d;
 }
 
 /* ====================== MAIN SECTION ======================= */
@@ -257,7 +257,7 @@ nav ul li.dropdown { position: static; }
   margin-bottom: 35px;
   background: #fff;
   padding: 28px;
-  border-left: 4px solid #e0a100;
+  border-left: 4px solid #327c3d;
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.06);
 }
@@ -272,7 +272,7 @@ nav ul li.dropdown { position: static; }
 }
 
 .gn-block h2 i {
-  color: #e0a100;
+  color: #327c3d;
 }
 
 .gn-block ul {
@@ -287,7 +287,7 @@ nav ul li.dropdown { position: static; }
 }
 
 .gn-block ul li i {
-  color: #e0a100;
+  color: #327c3d;
   margin-right: 8px;
 }
 
@@ -337,7 +337,7 @@ nav ul li.dropdown { position: static; }
 }
 
 .availability-table th {
-  background: #e0a100;
+  background: #327c3d;
   color: #fff;
   font-weight: 600;
 }
@@ -350,7 +350,7 @@ nav ul li.dropdown { position: static; }
 .gn-cta {
   display: inline-block;
   padding: 14px 26px;
-  background: #e0a100;
+  background: #327c3d;
   color: #fff;
   border-radius: 6px;
   text-decoration: none;
