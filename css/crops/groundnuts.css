@@ -195,7 +195,9 @@ nav ul li.dropdown { position: static; }
   align-items: center;
   justify-content: center;
   padding: 40px;
+  margin-top: 20px;
 }
+
 
 .banner-overlay {
   position: absolute;
@@ -362,6 +364,39 @@ nav ul li.dropdown { position: static; }
 .gn-cta:hover {
   background: #c48c00;
 }
+
+/* Extra Side Images */
+.gn-side-image {
+  width: 100%;
+  height: 600px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.gn-side-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Special tweaks for left vs right */
+.left-extra {
+  border-left: 4px solid #327c3d;
+}
+
+.right-extra {
+  border-right: 4px solid #327c3d;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .gn-side-image {
+    height: 180px;
+  }
+}
+
 
 /* RESPONSIVE */
 @media (max-width: 900px) {

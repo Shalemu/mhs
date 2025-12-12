@@ -196,6 +196,7 @@ nav ul li.dropdown { position: static; }
   grid-template-columns: 1.2fr 1fr;
   gap: 50px;
   align-items: start;
+
 }
 
 /* TITLES */

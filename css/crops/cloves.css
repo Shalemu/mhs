@@ -364,6 +364,40 @@ nav ul li.dropdown { position: static; }
   background: #327c3d;
 }
 
+/* EXTRA TALL IMAGES */
+.cloves-tall-image {
+  width: 100%;
+  height: 330px;   /* High height as you requested */
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 35px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.10);
+  background: #fff;
+}
+
+.cloves-tall-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Side styling */
+.left-tall {
+  border-left: 4px solid #327c3d;
+}
+
+.right-tall {
+  border-right: 4px solid #327c3d;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cloves-tall-image {
+    height: 220px;
+  }
+}
+
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .cloves-container {

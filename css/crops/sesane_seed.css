@@ -207,6 +207,7 @@ nav ul li.dropdown { position: static; }
   border-radius: 0 0 22px 22px;
   margin-bottom: 90px;
   overflow: hidden;
+  margin-top: 20px;
 }
 
 .sesame_header_overlay {
@@ -392,8 +393,13 @@ nav ul li.dropdown { position: static; }
 }
 
 .tall_image { height: 380px; }
-.wide_image { height: 260px; }
+.wide_image { height: 360px; }
 .main_right_image { height: 520px; }
+
+/* map */
+.tall_image1 { height: 1000px; }
+/* .wide_image { height: 260px; }
+.main_right_image { height: 520px; } */
 
 /* ====================================
    AVAILABILITY TABLE / CALENDAR

@@ -186,7 +186,7 @@ nav ul li.dropdown { position: static; }
 .blackpepper-banner {
   position: relative;
   height: 380px;
-  background-image: url('images/blackpepper-banner.jpg');
+  background-image: url('../../images/crops/blackpaper/blackpapper.jpg');
   background-size: cover;
   background-position: center;
   border-radius: 0 0 20px 20px;
@@ -194,12 +194,13 @@ nav ul li.dropdown { position: static; }
   align-items: center;
   justify-content: center;
   padding: 40px;
+  margin-bottom: 30px;
 }
 
 .blackpepper-banner .banner-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0,0,0,0.80);
 }
 
 .blackpepper-banner .banner-content {
@@ -210,9 +211,10 @@ nav ul li.dropdown { position: static; }
 }
 
 .blackpepper-banner h1 {
-  font-size: 34px;
-  font-weight: 700;
+  font-size: 40px;
+  font-weight: 800;
   margin-bottom: 15px;
+  text-transform: uppercase;
 }
 
 .blackpepper-banner p {
@@ -308,11 +310,11 @@ nav ul li.dropdown { position: static; }
 
 .img-box.large {
   grid-area: large;
-  height: 260px;
+  height: 360px;
 }
 
 .img-box.small {
-  height: 140px;
+  height: 240px;
 }
 
 .img-box img {
