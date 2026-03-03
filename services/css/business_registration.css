@@ -1,0 +1,500 @@
+
+.hero-intro {
+  padding: 110px 6% 100px;
+  background:
+    linear-gradient(rgba(15,23,42,0.85), rgba(37, 37, 37, 0.85)),
+    url("../../images/business.jpg") center/cover no-repeat;
+  color: #ffffff;
+  text-align: center;
+}
+
+.hero-inner {
+  max-width: 900px;
+  margin: auto;
+}
+
+.hero-intro h1 {
+   /* font-family: "Montserrat", sans-serif; */
+  font-size: clamp(2.6rem, 4vw, 3.8rem);
+  font-weight: 800;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.hero-intro p {
+   /* font-family: "Montserrat", sans-serif; */
+  font-size: 1.0rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.9);
+}
+
+
+/* ===============================
+   OVERVIEW SECTION
+================================ */
+
+.overview {
+  padding: 90px 6%;
+  background-color: #f8fafc;
+}
+
+/* ===============================
+   GRID LAYOUT
+================================ */
+
+.overview-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: stretch; /* ensures equal column height */
+}
+
+/* ===============================
+   TEXT COLUMN
+================================ */
+
+.overview-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.overview-text h2 {
+  /* font-family: "Montserrat", sans-serif; */
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 24px;
+  color: #0f172a;
+}
+
+.overview-text p {
+   /* font-family: "Montserrat", sans-serif; */
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #334155;
+  margin-bottom: 18px;
+}
+
+.overview-text p strong {
+  color: #020617;
+}
+
+.overview-text ul {
+  padding-left: 20px;
+  margin: 10px 0 24px;
+}
+
+.overview-text li {
+ /* font-family: "Montserrat", sans-serif; */
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #334155;
+}
+
+/* ===============================
+   IMAGE COLUMN
+================================ */
+
+.overview-image {
+  position: relative;
+  height: 100%;           
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+.overview-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;        
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* ===============================
+   TABLET & MOBILE
+================================ */
+
+@media (max-width: 991px) {
+  .overview {
+    padding: 70px 5%;
+  }
+
+  .overview-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .overview-text {
+    justify-content: flex-start;
+  }
+
+  .overview-image {
+    height: auto;
+  }
+
+  .overview-image img {
+    height: auto;
+    min-height: unset;
+  }
+}
+
+@media (max-width: 576px) {
+  .overview {
+    padding: 60px 4%;
+  }
+
+  .overview-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .overview-text p,
+  .overview-text li {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* ================= WHAT WE DO SPLIT SECTION ================= */
+.what-we-do-section {
+  width: 100%;
+  background: #f3f6fb;
+}
+
+.what-we-do-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 600px;
+}
+
+/* LEFT IMAGE */
+.what-we-do-image {
+  height: 100%;
+}
+
+.what-we-do-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* RIGHT CONTENT */
+.what-we-do-content {
+  padding: 100px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* SMALL TOP LABEL */
+.what-we-do-subtitle {
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #e72429;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* HEADING */
+.what-we-do-content h2 {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  color: #0a1a44;
+}
+
+/* DESCRIPTION */
+.what-we-do-description {
+  font-size: 16px;
+  color: #4b5563;
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+
+/* BENEFITS LIST */
+.what-we-do-benefits {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 35px;
+}
+
+.what-we-do-benefits li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  color: #374151;
+}
+
+.what-we-do-benefits li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #e72429;
+  font-weight: bold;
+}
+
+
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .what-we-do-container {
+    grid-template-columns: 1fr;
+  }
+
+  .what-we-do-content {
+    padding: 60px 30px;
+  }
+
+  .what-we-do-content h2 {
+    font-size: 30px;
+  }
+}
+
+
+/* ================= SERVE & WHY SECTION ================= */
+.serve-why-section {
+  width: 100%;
+  background-color: #f8fafc;
+  padding: 80px 0;
+}
+
+.serve-why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+/* LEFT IMAGE */
+.serve-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* RIGHT CONTENT */
+.serve-content {
+  padding: 70px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.serve-content h2 {
+  /* font-family: "Montserrat", sans-serif; */
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+  color: #0f172a;
+}
+
+.serve-content h4 {
+  /* font-family: "Montserrat", sans-serif; */
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 22px;
+  margin-bottom: 10px;
+  color: #e72429;
+}
+
+.serve-content p {
+  /* font-family: "Montserrat", sans-serif; */
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #334155;
+  margin-bottom: 18px;
+}
+
+/* BENEFITS LIST */
+.serve-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.serve-benefits li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 14px;
+  /* font-family: "Montserrat", sans-serif; */
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #334155;
+}
+
+.serve-benefits li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #e72429;
+  font-weight: 700;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 991px) {
+  .serve-why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .serve-content {
+    padding: 50px 40px;
+  }
+
+  .serve-image img {
+    max-height: 320px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .serve-content {
+    padding: 40px 30px;
+  }
+
+  .serve-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .serve-content h4 {
+    font-size: 1rem;
+  }
+
+  .serve-content p,
+  .serve-benefits li {
+    font-size: 0.95rem;
+  }
+}
+
+.final-cta {
+  padding: 90px 6%;
+  background: linear-gradient(135deg, #e72429, #c81c21);
+  text-align: center;
+  color: #ffffff;
+ /* font-family: "Montserrat", sans-serif; */
+}
+
+.final-cta h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+    /* font-family: "Montserrat", sans-serif; */
+    color: #ffffff;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+    /* font-family: "Montserrat", sans-serif; */
+}
+
+
+
+.btn.primary {
+  background: #ffffff;
+  color: #e72429;
+}
+
+.btn.secondary {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+
+
+    /* ===== FOOTER ===== */
+ /* Footer Styles */
+.footer {
+  background: #111;
+  color: #ddd;
+  padding: 60px 20px 20px;
+ /* font-family: "Montserrat", sans-serif; */
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+.footer-col a {
+ color: #e72429;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color:  #e72429;
+}
+
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #fff;
+  background: #222;
+  padding: 8px 10px;
+  border-radius: 50%;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background: #e72429;
+  color: #111;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 40px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+}
+
+

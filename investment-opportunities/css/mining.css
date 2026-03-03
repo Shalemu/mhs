@@ -1,0 +1,1068 @@
+
+/* =====================================================================
+   HERO – PREMIUM SECTOR (MINING & NATURAL RESOURCES)
+===================================================================== */
+.sector-hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 6%;
+  text-align: center;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.75) 0%,
+      rgba(0, 0, 0, 0.6) 40%,
+      rgba(0, 0, 0, 0.75) 100%
+    ),
+    url("../../images/mining/mining\ \(4\).jpg") center / cover no-repeat;
+
+  color: #ffffff;
+}
+
+.sector-hero-content {
+  max-width: 1400px;
+}
+
+/* TITLE */
+.sector-hero h1 {
+ 
+   /* font-family: "Montserrat", sans-serif; */
+  /* font-family: 'Bebas Neue', sans-serif; */
+  font-size: clamp(3.2rem, 4vw, 6.5rem);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  line-height: 1.05;
+  color: #fff;
+
+}
+
+/* SUBLINE */
+.sector-hero p {
+  /* font-family: "Montserrat", sans-serif; */
+  font-size: clamp(1.15rem, 2.0vw, 1.85rem);
+  line-height: 1.75;
+  opacity: 0.92;
+  max-width: 900px;
+  margin: 0 auto;
+
+}
+
+/* =====================================================================
+   RESPONSIVE REFINEMENTS
+===================================================================== */
+@media (max-width: 768px) {
+  .sector-hero {
+    min-height: 80vh;
+    padding: 100px 20px;
+  }
+
+  .sector-hero h1 {
+    font-size: clamp(3rem, 9vw, 4.6rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .sector-hero p {
+    font-size: 1.05rem;
+  }
+}
+
+/* =====================================================================
+   SECTOR INTRO – PREMIUM (MINING)
+===================================================================== */
+.sector-intro {
+  background: linear-gradient(180deg, #f7f8fa 0%, #ffffff 100%);
+  padding: 110px 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* WRAPPER */
+.intro-wrapper {
+  max-width: 1400px;      /* increased overall width */
+  margin: 0 auto;
+  padding: 0 6%;
+  text-align: center;
+}
+
+/* LABEL */
+.sector-intro .section-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #c8232a;
+  margin-bottom: 18px;
+}
+
+/* HEADING */
+.sector-intro h2 {
+   /* font-family: "Montserrat", sans-serif; */
+  font-size: 3.3rem;
+  line-height: 1.08;
+  color: #121212;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  letter-spacing: 1.1px;
+}
+
+/* DIVIDER */
+.sector-intro .section-divider {
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(90deg, #c8232a, #ff4d4d);
+  margin: 32px auto 48px;
+  border-radius: 2px;
+}
+
+/* TEXT */
+.intro-text {
+  max-width: 1200px;      /* wider content */
+  margin: 0 auto;
+  font-size: 1.15rem;
+  line-height: 1.95;
+  color: #444;
+}
+
+/* =====================================================================
+   RESPONSIVE
+===================================================================== */
+@media (max-width: 1024px) {
+  .sector-intro h2 {
+    font-size: 2.9rem;
+  }
+
+  .intro-text {
+    max-width: 100%;
+    font-size: 1.08rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sector-intro {
+    padding: 90px 0;
+  }
+
+  .intro-wrapper {
+    padding: 0 22px;
+  }
+
+  .sector-intro h2 {
+    font-size: 2.5rem;
+  }
+
+  .intro-text {
+    font-size: 1.03rem;
+    line-height: 1.85;
+  }
+}
+
+@media (max-width: 480px) {
+  .sector-intro h2 {
+    font-size: 2.1rem;
+  }
+
+  .intro-text {
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+}
+
+
+
+
+/* =====================================================================
+   EXTENDED OVERVIEW – PREMIUM INSTITUTIONAL
+===================================================================== */
+.sector-overview {
+  padding: 120px 3%;
+  background: linear-gradient(180deg, #ffffff 0%, #f7f8fa 100%);
+}
+
+.overview-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* PANEL (NOT A CARD) */
+.overview-panel {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  background: #ffffff;
+  /* border-radius: 18px; */
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* IMAGE */
+.overview-image {
+  position: relative;
+}
+
+.overview-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.55)
+  );
+}
+
+.overview-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* CONTENT */
+.overview-content {
+  padding: 80px 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* LABEL */
+.overview-content .section-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #c8232a;
+  margin-bottom: 18px;
+}
+
+/* HEADING */
+.overview-content h2 {
+ /* font-family: "Montserrat", sans-serif; */
+  font-size: 3.1rem;
+  text-transform: uppercase;
+  color: #121212;
+  line-height: 1.08;
+  margin-bottom: 14px;
+  letter-spacing: 1px;
+}
+
+/* DIVIDER */
+.overview-content .section-divider {
+  width: 85px;
+  height: 4px;
+  background: linear-gradient(90deg, #c8232a, #ff4d4d);
+  margin: 28px 0 40px;
+  border-radius: 2px;
+}
+
+/* TEXT */
+.overview-content p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 22px;
+}
+
+/* LIST – POLICY STYLE */
+.check-list {
+  list-style: none;
+  margin-top: 12px;
+  padding: 0;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 34px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.check-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #c8232a, #ff5a5a);
+}
+
+/* =====================================================================
+   RESPONSIVE
+===================================================================== */
+@media (max-width: 1024px) {
+  .overview-content {
+    padding: 65px 55px;
+  }
+}
+
+@media (max-width: 768px) {
+  .overview-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .overview-image {
+    height: 340px;
+  }
+
+  .overview-content {
+    padding: 55px 32px;
+  }
+
+  .overview-content h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .overview-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .overview-content p {
+    font-size: 1rem;
+  }
+}
+
+
+
+/* =====================================================================
+   SECTOR OPPORTUNITIES – PREMIUM SMOOTH CARDS
+===================================================================== */
+.sector-opportunities {
+  background: linear-gradient(180deg, #ffffff 0%, #f7f8fa 100%);
+  padding: 110px 6%;
+ /* font-family: "Montserrat", sans-serif; */
+  color: #1b1b1b;
+}
+
+/* CONTAINER */
+.opportunities-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* LABEL */
+.sector-opportunities .section-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #c8232a;
+  margin-bottom: 14px;
+  display: inline-block;
+}
+
+/* HEADING */
+.sector-opportunities h2 {
+   /* font-family: "Montserrat", sans-serif; */
+  font-size: 3.1rem;
+  text-transform: uppercase;
+  color: #121212;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
+/* DIVIDER */
+.sector-opportunities .section-divider {
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(90deg, #c8232a, #ff4d4d);
+  margin: 26px auto 60px;
+  border-radius: 2px;
+}
+
+/* GRID */
+.opportunities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+/* =====================================================================
+   OPPORTUNITY CARD – SMOOTH & LIGHT
+===================================================================== */
+.opportunity-card {
+  position: relative;
+  background: #ffffff;
+  padding: 34px 28px;
+  border-radius: 18px;
+  min-height: 150px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.08);
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  overflow: hidden;
+}
+
+/* ACCENT LINE */
+.opportunity-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, #c8232a, #ff5a5a);
+  opacity: 0.85;
+}
+
+/* HOVER */
+.opportunity-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 28px 70px rgba(0, 0, 0, 0.14),
+    0 0 0 1px rgba(200, 35, 42, 0.18);
+}
+
+/* TITLE */
+.opportunity-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #121212;
+  margin-bottom: 10px;
+  letter-spacing: 0.3px;
+  text-align: center;
+}
+
+/* DESCRIPTION */
+.opportunity-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 92%;
+}
+
+/* =====================================================================
+   RESPONSIVE
+===================================================================== */
+@media (max-width: 1024px) {
+  .sector-opportunities h2 {
+    font-size: 2.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sector-opportunities {
+    padding: 90px 20px;
+  }
+
+  .opportunities-grid {
+    gap: 24px;
+  }
+
+  .opportunity-card {
+    padding: 30px 24px;
+    min-height: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sector-opportunities h2 {
+    font-size: 2.1rem;
+  }
+
+  .opportunity-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .opportunity-card p {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+/* =====================================================================
+   SECTOR INCENTIVES – SPLIT WITH IMAGE
+===================================================================== */
+.sector-incentives {
+  padding: 110px 0%;
+  background: linear-gradient(180deg, #f7f8fa 0%, #eef0f4 100%);
+  /* font-family: "Montserrat", sans-serif; */
+  color: #1b1b1b;
+}
+
+/* CONTAINER */
+.incentives-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* ================= LEFT CONTENT ================= */
+.incentives-content {
+  max-width: 560px;
+}
+
+/* LABEL */
+.sector-incentives .section-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #c8232a;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+/* HEADING */
+.sector-incentives h2 {
+   /* font-family: "Montserrat", sans-serif; */
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #121212;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
+/* DIVIDER */
+.sector-incentives .section-divider {
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(90deg, #c8232a, #ff5a5a);
+  margin-bottom: 46px;
+  border-radius: 3px;
+}
+
+/* CHECK LIST */
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 34px;
+  margin-bottom: 22px;
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* CHECK ICON */
+.check-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #c8232a, #ff5a5a);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(200, 35, 42, 0.35);
+}
+
+/* ================= RIGHT IMAGE ================= */
+.incentives-image {
+  position: relative;
+  height: 460px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.18);
+}
+
+.incentives-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* =====================================================================
+   RESPONSIVE
+===================================================================== */
+@media (max-width: 1024px) {
+  .incentives-container {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .incentives-content {
+    max-width: 100%;
+  }
+
+  .incentives-image {
+    height: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sector-incentives {
+    padding: 90px 20px;
+  }
+
+  .incentives-image {
+    height: 360px;
+  }
+
+  .sector-incentives h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sector-incentives h2 {
+    font-size: 2.1rem;
+  }
+
+  .check-list li {
+    font-size: 1rem;
+  }
+}
+
+/* =====================================================================
+   INCENTIVES – PREMIUM
+===================================================================== */
+.sector-incentives {
+  padding: 100px 6%;
+  background: #f7f8fa;
+}
+
+.incentives-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.sector-incentives .section-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #c8232a;
+  margin-bottom: 14px;
+}
+
+.sector-incentives h2 {
+  /* font-family: "Montserrat", sans-serif; */
+  font-size: 2.8rem;
+  color: #121212;
+  margin-bottom: 20px;
+}
+
+.sector-incentives .section-divider {
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(90deg,#c8232a,#ff5a5a);
+  margin: 26px 0 50px;
+  border-radius: 2px;
+}
+
+.check-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 34px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.check-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: linear-gradient(180deg,#c8232a,#ff5a5a);
+}
+
+
+/* =====================================================================
+   COMPETITIVENESS – PREMIUM TWO-COLUMN
+===================================================================== */
+.sector-competitive {
+  padding: 110px 6%;
+  background: #f7f8fa;
+  /* font-family: "Montserrat", sans-serif; */
+  color: #1b1b1b;
+}
+
+.competitive-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* GRID LAYOUT */
+.competitive-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+/* IMAGE */
+.competitive-image {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+}
+
+.competitive-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.competitive-image img:hover {
+  transform: scale(1.03);
+}
+
+/* CONTENT */
+.competitive-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* LABEL */
+.competitive-content .section-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #c8232a;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+/* HEADING */
+.competitive-content h2 {
+  /* font-family: "Montserrat", sans-serif; */
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #121212;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* DIVIDER */
+.competitive-content .section-divider {
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(90deg,#c8232a,#ff5a5a);
+  margin: 28px 0 40px;
+  border-radius: 2px;
+}
+
+/* LIST */
+.competitive-content .check-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.competitive-content .check-list li {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.competitive-content .check-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #c8232a;
+  font-weight: 700;
+}
+
+/* =====================================================================
+   RESPONSIVE
+===================================================================== */
+@media (max-width: 1024px) {
+  .competitive-grid {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .competitive-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .competitive-image {
+    height: 320px;
+    margin-bottom: 40px;
+  }
+
+  .competitive-content h2 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .competitive-content h2 {
+    font-size: 2rem;
+  }
+
+  .competitive-content .check-list li {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* =============================== CTA =============================== */
+.cta-section {
+  background: #ffffff;
+  padding: 60px 6%;
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.cta-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.cta-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.cta-text {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 45px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cta-buttons a {
+  display: inline-block;
+  padding: 14px 34px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #e72429;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #c51e22;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #e72429;
+  border: 2px solid #e72429;
+}
+
+.btn-secondary:hover {
+  background: #e72429;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* =============================== RESPONSIVE =============================== */
+@media (max-width: 1024px) {
+  .intro-card {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .intro-content {
+    padding: 60px 40px;
+  }
+
+  .overview-wrapper,
+  .insights-wrapper,
+  .strategy-wrapper,
+  .cta-container {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-card {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-content {
+    padding: 50px 30px;
+    text-align: center;
+  }
+
+  .intro-image {
+    height: 300px;
+  }
+
+  .overview-wrapper,
+  .insights-wrapper,
+  .strategy-wrapper,
+  .cta-container {
+    padding: 0 25px;
+  }
+
+  .overview-wrapper h2,
+  .insights-wrapper h2,
+  .cta-title {
+    font-size: 2.3rem;
+  }
+
+  .strategy-lead,
+  .cta-text {
+    font-size: 16px;
+  }
+
+  .strategy-list li {
+    font-size: 15.5px;
+    padding-left: 26px;
+  }
+
+  .insights-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-content h2,
+  .overview-wrapper h2,
+  .insights-wrapper h2,
+  .cta-title {
+    font-size: 2rem;
+  }
+
+  .intro-card {
+    margin: 0 10px;
+  }
+
+  .insight-card h3 {
+    font-size: 16px;
+  }
+
+  .insight-card p {
+    font-size: 15px;
+  }
+}
+
+  /* Footer Styles */
+.footer {
+  background: #111;
+  color: #ddd;
+  padding: 60px 20px 20px;
+   /* font-family: "Montserrat", sans-serif; */
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+.footer-col a {
+ color: #e72429;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color:  #e72429;
+}
+
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #fff;
+  background: #222;
+  padding: 8px 10px;
+  border-radius: 50%;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background: #e72429;
+  color: #111;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 40px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+}

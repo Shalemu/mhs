@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>MHS Consults</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/about.css">
+    </head>
+
+    <body>
+        <!-- Spinner Start -->
+        <div id="spinner" class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary-red" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Topbar Start -->
+       <div class="container-fluid bg-dark px-0">
+        <div class="row g-0 d-none d-lg-flex">
+            <div class="col-lg-6 ps-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center text-white">
+                    <span>Follow Us:</span>
+                    <a class="btn btn-link text-light" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-link text-light" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-link text-light" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-link text-light" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6 text-end">
+                <div class="h-100 topbar-right d-inline-flex align-items-center text-white py-2 px-5">
+                    <span class="fs-5 fw-bold me-2"><i class="fa fa-phone-alt me-2"></i>Call Us:</span>
+                    <span class="fs-5 fw-bold">+255 741 175 227</span>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Topbar End -->
+
+       <!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 pe-5">
+  <a href="index.html" class="navbar-brand ps-5 me-0">
+    <h1 class="text-white m-0">  <img src="img/mhs-logo.png" alt="Industro Logo" class="logo-img"></h1>
+  </a>
+
+  <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <div class="navbar-nav ms-auto p-4 p-lg-0">
+
+      <a href="index.html" class="nav-item nav-link ">Home</a>
+      <a href="about.html" class="nav-item nav-link active">About</a>
+
+ <li class="nav-item dropdown mega-dropdown">
+  <a href="#" class="nav-link dropdown-toggle">Services</a>
+
+  <div class="dropdown-menu mega-menu shadow">
+    <div class="mega-content">
+
+      <!-- Column 1 -->
+      <div class="menu-column">
+        <a href="services/bookkeeping.html">
+          <span class="icon-circle"><i class="fa fa-book"></i></span>
+          Business Registration & Compliance
+        </a>
+        <a href="services/tax.html">
+          <span class="icon-circle"><i class="fa fa-file-invoice-dollar"></i></span>
+          Tax Consultancy
+        </a>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="menu-column">
+        <a href="services/bookkeeping.html">
+          <span class="icon-circle"><i class="fa fa-briefcase"></i></span>
+          Bookkeeping & Financial Reporting
+        </a>
+        <a href="services/creative-writing.html">
+          <span class="icon-circle"><i class="fa fa-pen"></i></span>
+          Creative Writing & Documentation
+        </a>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="menu-column">
+        <a href="services/branding.html">
+          <span class="icon-circle"><i class="fa fa-bullhorn"></i></span>
+          Branding & Promotion
+        </a>
+        <a href="services/digital-marketing.html">
+          <span class="icon-circle"><i class="fa fa-laptop-code"></i></span>
+          Digital Marketing
+        </a>
+      </div>
+
+      <!-- Column 4 -->
+      <div class="menu-column">
+        <a href="services/website-design.html">
+          <span class="icon-circle"><i class="fa fa-globe"></i></span>
+          Website Design
+        </a>
+        <a href="services/training.html">
+          <span class="icon-circle"><i class="fa fa-chalkboard-teacher"></i></span>
+          Training & Capacity Building
+        </a>
+      </div>
+
+      <!-- Column 5 -->
+      <div class="menu-column">
+        <a href="services/survey.html">
+          <span class="icon-circle"><i class="fa fa-chart-line"></i></span>
+          Data Analysis & Impact Studies
+        </a>
+        <a href="services/investment.html">
+          <span class="icon-circle"><i class="fa fa-chart-pie"></i></span>
+          Investment Advisory
+        </a>
+      </div>
+
+    </div>
+  </div>
+</li>
+
+   <li class="nav-item dropdown mega-dropdown">
+  <a href="investment-hub.html" class="nav-link dropdown-toggle">Investment Hub</a>
+
+  <div class="dropdown-content mega-menu investment-mega">
+
+    <div class="mega-content">
+
+      <!-- COLUMN 1 -->
+      <div class="menu-column">
+        <h4 class="mega-title">
+          <span class="mega-icon"></span>
+          Why Invest in Tanzania
+        </h4>
+        <a href="investment-tanzania/stable-political.html"><span class="icon-circle"><i class="fa fa-check"></i></span> Stable Political & Economic Environment</a>
+        <a href="investment-tanzania/strategic-location.html"><span class="icon-circle"><i class="fa fa-globe"></i></span> Strategic Location & Market Access</a>
+        <a href="investment-tanzania/government-incetive.html"><span class="icon-circle"><i class="fa fa-gift"></i></span> Government Incentives</a>
+        <a href="investment-tanzania/abundant-natural.html"><span class="icon-circle"><i class="fa fa-mountain-sun"></i></span> Abundant Natural Resources</a>
+      </div>
+
+      <!-- COLUMN 2 -->
+      <div class="menu-column">
+        <h4 class="mega-title">
+          <span class="mega-icon"></span>
+          Investment Opportunities
+        </h4>
+        <a href="investment-opportunities/agriculture.html"><span class="icon-circle"><i class="fa fa-seedling"></i></span> Agriculture & Agribusiness</a>
+        <a href="investment-opportunities/mining.html"><span class="icon-circle"><i class="fa fa-gem"></i></span> Mining & Natural Resources</a>
+        <a href="investment-opportunities/tourism.html"><span class="icon-circle"><i class="fa fa-umbrella-beach"></i></span> Tourism & Hospitality</a>
+        <a href="investment-opportunities/real-estate.html"><span class="icon-circle"><i class="fa fa-building"></i></span> Real Estate & Construction</a>
+      </div>
+
+      <!-- COLUMN 3 -->
+      <div class="menu-column">
+        <h4 class="mega-title">
+          <span class="mega-icon"></span>
+          More Opportunities
+        </h4>
+        <a href="investment-opportunities/manufacturing.html"><span class="icon-circle"><i class="fa fa-industry"></i></span> Manufacturing & Processing</a>
+        <a href="investment-opportunities/energy.html"><span class="icon-circle"><i class="fa fa-bolt"></i></span> Energy & Infrastructure</a>
+        <a href="investment-opportunities/logistic_transport.html"><span class="icon-circle"><i class="fa fa-truck"></i></span> Logistics & Transport</a>
+        <a href="investment-opportunities/ict.html"><span class="icon-circle"><i class="fa fa-laptop-code"></i></span> ICT & Digital Economy</a>
+      </div>
+
+      <!-- COLUMN 4 -->
+      <div class="menu-column highlight-column">
+        <h4 class="mega-title">
+          <span class="mega-icon"></span>
+          Investment Promotion Services
+        </h4>
+        <p class="mega-description">
+          We support investors from entry to expansion with strategic guidance,
+          regulatory compliance, and local market intelligence.
+        </p>
+        <a href="#contact" class="mega-cta"><i class="fa fa-arrow-right"></i> Explore Our Services</a>
+      </div>
+
+    </div> <!-- /mega-content -->
+  </div> <!-- /mega-menu -->
+</li>
+
+          <a href="who_we_serve.html" class="nav-item nav-link">Who We Serve</a>
+      <a href="index.html#contact.html" class="nav-item nav-link">Contact</a>
+
+    </div>
+
+    <a href="services.html" class="btn bg-primary-red text-white px-3 d-none d-lg-block">Explore Services</a>
+  </div>
+</nav>
+<!-- Navbar End -->
+      <!-- ===== HERO ===== -->
+  <section class="hero">
+    <!-- <h1>About Us - MHS Consults</h1> -->
+    <h1>MHS Consults</h1>
+    <p>We are a Tanzanian consulting firm helping people, businesses, and investors operate with clarity, structure, and confidence</p>
+  </section>
+
+
+ <!-- ===== WHO WE ARE – SPLIT ===== -->
+<section class="who-we-are-split" id="about">
+
+  <div class="who-we-are-container">
+
+    <!-- LEFT CONTENT -->
+    <div class="who-we-are-content">
+
+      <span class="about-eyebrow">ABOUT US</span>
+
+      <h2>
+        Who We Are
+      </h2>
+
+      <div class="underline"></div>
+
+      <p class="about-intro">
+        MHS Consults is a multidisciplinary consulting firm based in Tanzania,
+        serving local businesses, organizations, and global investors seeking
+        to enter or grow within the Tanzanian market.
+        Our work covers the full business lifecycle, from registration and
+        compliance to tax advisory, bookkeeping, financial reporting,
+        branding, digital presence, training, research, and investment
+        market-entry advisory.
+      </p>
+
+      <p>
+        We combine professional expertise, local insight, and a practical
+        problem-solving approach to help our clients operate smoothly within
+        Tanzania’s dynamic environment.
+      We combine professional expertise, local insight, and a practical
+     For us, consulting is not paperwork, it is more than that, it is partnership,
+      guidance, and building structures that last.
+      </p>
+
+      <!-- PURPOSE BLOCK -->
+      <div class="purpose-box">
+        <h4>Our Purpose</h4>
+        <p>
+        Our purpose is to make it easier for people and businesses to start, operate, and grow in Tanzania.
+         Whether you’re an entrepreneur navigating your first registration, an established company strengthening 
+         compliance and financial systems, 
+        or an investor entering the market, our job is to give you clarity and support every step of the way.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="who-we-are-image">
+      <img src="images/about us.jpg" alt="Consulting team discussion">
+    </div>
+
+  </div>
+
+</section>
+
+  <section class="approach-section" id="our-approach">
+
+  <div class="approach-container">
+
+    <!-- LEFT IMAGE -->
+    <div class="approach-image">
+      <img src="images/about1.jpg" alt="Consulting approach meeting">
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="approach-content">
+
+      <span class="approach-eyebrow">OUR APPROACH</span>
+
+      <h2>
+        A Structured Way to<br>
+        Support Business Growth
+      </h2>
+
+      <p class="approach-intro">
+        Our work is guided by clarity, local expertise, and disciplined execution.
+        We focus on building long-term partnerships, not one-off transactions.
+      </p>
+
+      <div class="approach-pillars">
+
+        <div class="approach-card">
+          <i class="fa-solid fa-lightbulb"></i>
+          <h4>Clear Direction</h4>
+          <p>
+            We simplify complex requirements into clear, practical steps
+            so clients know exactly what to do and why it matters.
+          </p>
+        </div>
+
+        <div class="approach-card">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <h4>Local Expertise</h4>
+          <p>
+            Our advice is grounded in real experience within Tanzania’s
+            regulatory, tax, and operational environment.
+          </p>
+        </div>
+
+        <div class="approach-card">
+          <i class="fa-solid fa-gears"></i>
+          <h4>Disciplined Execution</h4>
+          <p>
+            We manage processes with structure, timelines, and accountability
+            to ensure reliable delivery.
+          </p>
+        </div>
+
+        <div class="approach-card">
+          <i class="fa-solid fa-handshake"></i>
+          <h4>Long-Term Partnership</h4>
+          <p>
+            We grow with our clients, providing continuous support as their
+            businesses evolve and expand.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="approach-cta">
+        <a href="#contact" class="btn-primary">Work With Us</a>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- ===== CORE VALUES + MISSION & VISION ===== -->
+  <section class="values-section" id="values">
+    <h2><span>Our</span> Values</h2>
+
+    <div class="values-grid">
+      <div class="value-item">
+        <i class="fa-solid fa-lightbulb"></i>
+        <div>
+          <h4>Professionalism</h4>
+          <p>We uphold high standards in everything we deliver.</p>
+        </div>
+      </div>
+
+      <div class="value-item">
+        <i class="fa-solid fa-gauge-high"></i>
+        <div>
+          <h4>Integrity</h4>
+          <p>We are honest, transparent, and accountable.</p>
+        </div>
+      </div>
+
+      <div class="value-item">
+        <i class="fa-solid fa-gears"></i>
+        <div>
+          <h4>Commitment</h4>
+          <p>We show up, follow through, and go the extra mile.</p>
+        </div>
+      </div>
+
+      <div class="value-item">
+        <i class="fa-solid fa-people-carry-box"></i>
+        <div>
+          <h4>Growth Mindset</h4>
+          <p>We continuously improve and help our clients grow too.</p>
+        </div>
+      </div>
+
+ 
+    </div>
+
+    <!-- Mission & Vision -->
+    <div class="mission-vision">
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-icon">
+            <i class="fa-solid fa-bullseye"></i>
+          </div>
+          <button class="accordion-button" type="button" data-bs-toggle="collapse"
+            data-bs-target="#missionCollapse" aria-expanded="true" aria-controls="missionCollapse">
+            Mission
+          </button>
+        </div>
+        <div id="missionCollapse" class="accordion-collapse collapse show">
+          <div class="accordion-body">
+            To empower businesses and organizations through innovative consulting, analytical insights,
+            and creative solutions that enhance performance, strengthen compliance, and unlock opportunities.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-icon">
+            <i class="fa-solid fa-eye"></i>
+          </div>
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#visionCollapse" aria-expanded="false" aria-controls="visionCollapse">
+            Vision
+          </button>
+        </div>
+        <div id="visionCollapse" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            To become a trusted partner and thought leader in business consulting and analytics across Africa,
+            driving innovation, compliance, and sustainable growth.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="different-section" id="different">
+  <div class="different-container">
+    <h2><span>What Makes</span> Us Different</h2>
+    <p class="different-intro">
+      MHS stands out because:
+    </p>
+
+    <div class="different-points">
+      <div class="different-point">
+        <i class="fa-solid fa-microscope"></i>
+        <p>We understand Tanzania’s systems deeply. We go beyond what is written on paper.</p>
+      </div>
+
+      <div class="different-point">
+        <i class="fa-solid fa-handshake-angle"></i>
+        <p>We serve both local businesses and foreign investors with equal clarity.</p>
+      </div>
+
+      <div class="different-point">
+        <i class="fa-solid fa-building-circle-check"></i>
+        <p>All essential services are under one roof, reducing your stress and cost.</p>
+      </div>
+
+      <div class="different-point">
+        <i class="fa-solid fa-language"></i>
+        <p>We communicate in both English and Kiswahili for easy understanding.</p>
+      </div>
+
+      <div class="different-point">
+        <i class="fa-solid fa-lightbulb"></i>
+        <p>We combine technical expertise with creative, digital, and branding solutions.</p>
+      </div>
+
+      <div class="different-point">
+        <i class="fa-solid fa-people-arrows"></i>
+        <p>We focus on long-term relationships, not one-off interactions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="who-work-split" id="who-we-work">
+  <div class="who-work-container">
+
+    <!-- LEFT CONTENT -->
+    <div class="who-work-content">
+      <span class="who-eyebrow">WHO WE WORK WITH</span>
+
+      <h2>
+        Supporting a Wide Range of Clients<br>
+        Across Tanzania & Beyond
+      </h2>
+
+      <p class="who-intro">
+        Our clients benefit from tailored consulting services that meet the unique needs of their business or organization.
+      </p>
+
+      <div class="who-cards">
+        <div class="who-card">
+          <i class="fa-solid fa-rocket"></i>
+          <h4>Entrepreneurs & Startups</h4>
+        </div>
+
+        <div class="who-card">
+          <i class="fa-solid fa-building"></i>
+          <h4>SMEs & Local Companies</h4>
+        </div>
+
+        <div class="who-card">
+          <i class="fa-solid fa-hands-helping"></i>
+          <h4>NGOs & Community Projects</h4>
+        </div>
+
+        <div class="who-card">
+          <i class="fa-solid fa-briefcase"></i>
+          <h4>Corporate Firms & Professional Practices</h4>
+        </div>
+
+        <div class="who-card">
+          <i class="fa-solid fa-globe"></i>
+          <h4>Foreign & Diaspora Investors</h4>
+        </div>
+
+        <div class="who-card">
+          <i class="fa-solid fa-network-wired"></i>
+          <h4>International Organizations entering Tanzania</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="who-work-image">
+      <img src="images/about2.jpg" alt="Collaborative business meeting">
+    </div>
+
+  </div>
+</section>
+
+<section class="brand-promise-premium" id="brand-promise">
+  <div class="brand-promise-container">
+    <div class="brand-promise-content">
+      <h2>Our Brand Promise</h2>
+      <div class="underline"></div>
+      <p>
+        We promise clarity, structure, and practical solutions that help you move forward 
+        with confidence, no matter where you are in your business or investment journey.
+      </p>
+    </div>
+    <!-- Background Icon / Accent -->
+    <div class="brand-promise-icon">
+      <i class="fa-solid fa-handshake"></i>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ===== CTA ===== -->
+  <section class="cta">
+    <h2>Let’s Build Something Great Together</h2>
+    <p>Let’s move your business or investment forward.</p>
+    <a href="index.html#contact">Book a Consultation</a>
+    <a href="index.html#service">Explore Our Services</a>
+  </section>
+
+  <link rel="stylesheet" href="../script.js">
+
+  <!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Left Column: About + Social -->
+    <div class="footer-col">
+      <h3>MHS Consults</h3>
+      <p>
+        We provide business management and statistical services tailored to your needs. 
+        Your growth is our success.
+      </p>
+      <div class="social-icons">
+        <a href="https://web.facebook.com/mhsconsults"><i class="fab fa-facebook-f"></i></a>
+        <a href=" https://twitter.com/MHSConsults"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/mhsconsults"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/mhsconsults"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+     <ul>
+        <li><a href="index.html" class="nav-link" data-target="home">Home</a></li>
+      <li><a href="about-us.html" class="nav-link active" data-target="about">About Us</a></li>
+      <li><a href="service.html" class="nav-link" data-target="service">Services</a></li>
+      <li><a href="investment-hub.html" class="nav-link" data-target="partner">Investment Hub</a></li>
+      <li><a href="who_we_serve.html" class="nav-link" data-target="contact">Who we Serve</a></li>
+      <li><a href="index.html#partner" class="nav-link" data-target="contact">Clients</a></li>
+      <li><a href="index.html#contact" class="nav-link" data-target="contact">Contacts</a></li>
+
+
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-col">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="services/bookkeeping.html">Bookkeeping & Financial Reporting</a></li>
+        <li><a href="services/tax.html">Tax Consultancy</a></li>
+        <li><a href="services/registration.html">Registration, Compliance & Applications</a></li>
+        <li><a href="services/digital-marketing.html">Digital Marketing & Creative Writing</a></li>
+        <li><a href="services/website-design.html">Website Design & Development</a></li>
+        <li><a href="services/survey.html">Survey, Data Analysis & Impact Studies</a></li>
+        <li><a href="services/branding.html">Branding, Printing & Promotion</a></li>
+        <li><a href="services/training.html">Training & Capacity Building</a></li>
+       
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>House No. 37, University Road,<br>Survey, Dar Es Salaam</p>
+    <p><a href="tel:+255741175227">+255 741 175 227</a> || <a href="tel:+255655292854">+255 655 292 854</a></p>
+      <p><a href="mailto:info@mhsconsults.co.tz">info@mhsconsults.co.tz</a></p>
+    </div>
+
+  </div>
+
+  <!-- Bottom Row -->
+  <div class="footer-bottom">
+    <p>© 2026 MHS Consults. All Rights Reserved. Registered in Tanzania.</p>
+  </div>
+</footer>
+
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.value-item').forEach(item => observer.observe(item));
+  </script>
+
+      <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+
+            <!-- Back to Top -->
+    <a href="#" class="btn btn-secondary btn-square rounded-circle back-to-top">
+        <i class="fa fa-arrow-up text-white"></i>
+    </a>
+
+
+</body>
+</html>
+
+
+    
+

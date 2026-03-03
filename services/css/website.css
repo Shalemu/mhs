@@ -1,0 +1,502 @@
+
+.hero-intro.website-hero {
+  padding: 110px 6% 100px;
+  background:
+    linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)),
+    url("../../images/website.jpg") center/cover no-repeat;
+  color: #ffffff;
+  text-align: center;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero-intro h1 {
+ /* font-family: "Montserrat", sans-serif; */
+  font-size: clamp(2.6rem, 5vw, 3.8rem);
+  font-weight: 800;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.hero-intro p {
+  /* font-family: "Montserrat", sans-serif; */
+  font-size: 1.5rem;
+  line-height: 1.9;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 14px;
+}
+
+
+
+.overview {
+  padding: 90px 6%;
+  background-color: #f8fafc;
+}
+
+/* ===============================
+   GRID LAYOUT
+================================ */
+
+.overview-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: stretch; /* ensures equal column height */
+}
+
+/* ===============================
+   TEXT COLUMN
+================================ */
+
+.overview-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.overview-text h2 {
+  /* font-family: "Montserrat", sans-serif; */
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 24px;
+  color: #0f172a;
+}
+
+.overview-text p {
+ /* font-family: "Montserrat", sans-serif; */
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #334155;
+  margin-bottom: 18px;
+}
+
+.overview-text p strong {
+  color: #020617;
+}
+
+.overview-text ul {
+  padding-left: 20px;
+  margin: 10px 0 24px;
+}
+
+.overview-text li {
+ font-family: "Montserrat", sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #334155;
+}
+
+/* ===============================
+   IMAGE COLUMN
+================================ */
+
+.overview-image {
+  position: relative;
+  height: 100%;            
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+.overview-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;        
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* ===============================
+   TABLET & MOBILE
+================================ */
+
+@media (max-width: 991px) {
+  .overview {
+    padding: 70px 5%;
+  }
+
+  .overview-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .overview-text {
+    justify-content: flex-start;
+  }
+
+  .overview-image {
+    height: auto;
+  }
+
+  .overview-image img {
+    height: auto;
+    min-height: unset;
+  }
+}
+
+@media (max-width: 576px) {
+  .overview {
+    padding: 60px 4%;
+  }
+
+  .overview-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .overview-text p,
+  .overview-text li {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* SECTION */
+.what-we-do-premium {
+  padding: 100px 6%;
+  background: #ffffff;
+}
+
+/* CONTAINER */
+.what-we-do-container {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* INTRO COLUMN */
+.intro-column h2 {
+  /* font-family: "Montserrat", sans-serif; */
+  font-size: 2.6rem;
+  margin-bottom: 18px;
+  color: #0f172a;
+}
+
+.intro-column p {
+  color: #475569;
+  line-height: 1.8;
+  max-width: 420px;
+}
+
+/* SERVICES COLUMN */
+.services-column {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+/* SERVICE ROW */
+.service-row {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #e5e7eb;
+  transition: transform 0.3s ease;
+}
+
+.service-row:last-child {
+  border-bottom: none;
+}
+
+.service-row:hover {
+  transform: translateX(6px);
+}
+
+/* ICON CIRCLE */
+.icon-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(231, 36, 41, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.icon-circle i {
+  color: #e72429;
+  font-size: 1.2rem;
+}
+
+.service-row:hover .icon-circle {
+  background: #e72429;
+}
+
+.service-row:hover .icon-circle i {
+  color: #fff;
+}
+
+/* TEXT */
+.service-row h4 {
+  font-size: 1.25rem;
+  margin-bottom: 6px;
+  color: #0f172a;
+}
+
+.service-row p {
+  color: #475569;
+  line-height: 1.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .what-we-do-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .intro-column p {
+    max-width: 100%;
+  }
+}
+
+/* ===============================
+   WHO + WHY (WEB) SECTION
+================================ */
+
+.who-why-web {
+  padding: 100px 6%;
+  background: #f8fafc;
+}
+
+/* SPLIT LAYOUT */
+.who-why-web-container {
+  max-width: 1400px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 70px;
+  align-items: stretch; /* ensures equal height */
+}
+
+/* CONTENT SIDE */
+.who-why-web-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+}
+
+/* HEADINGS */
+.content-block h2 {
+  /* font-family: "Montserrat", sans-serif; */
+  font-size: 2.3rem;
+  margin-bottom: 24px;
+  color: #0f172a;
+}
+
+/* SERVE ITEMS */
+.serve-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(231, 36, 41, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: 0.3s ease;
+}
+
+.icon-circle i {
+  color: #e72429;
+  font-size: 1.1rem;
+}
+
+/* Hover animation */
+.serve-item:hover .icon-circle {
+  background: #e72429;
+}
+
+.serve-item:hover .icon-circle i {
+  color: #fff;
+}
+
+.serve-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  color: #0f172a;
+}
+
+.serve-item p {
+  color: #475569;
+  line-height: 1.7;
+}
+
+/* WHY LIST */
+.why-list {
+  list-style: none;
+  padding: 0;
+}
+
+.why-list li {
+  margin-bottom: 12px;
+  padding-left: 26px;
+  position: relative;
+  color: #334155;
+  line-height: 1.7;
+}
+
+.why-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #e72429;
+  font-weight: bold;
+}
+
+/* IMAGE SIDE */
+.who-why-web-image {
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.who-why-web-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills equal height */
+  display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .who-why-web-container {
+    grid-template-columns: 1fr;
+  }
+
+  .who-why-web-image {
+    height: 350px;
+  }
+}
+
+
+.final-cta {
+  padding: 90px 6%;
+  background: linear-gradient(135deg, #e72429, #c81c21);
+  text-align: center;
+  color: #ffffff;
+ /* font-family: "Montserrat", sans-serif; */
+}
+
+.final-cta h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #fff;
+ /* font-family: "Montserrat", sans-serif; */
+}
+
+
+
+.btn.primary {
+  background: #ffffff;
+  color: #e72429;
+}
+
+.btn.secondary {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+
+
+   
+ /* Footer Styles */
+.footer {
+  background: #111;
+  color: #ddd;
+  padding: 60px 20px 20px;
+ /* font-family: "Montserrat", sans-serif; */
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+.footer-col a {
+ color: #e72429;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color:  #e72429;
+}
+
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #fff;
+  background: #222;
+  padding: 8px 10px;
+  border-radius: 50%;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background: #e72429;
+  color: #111;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 40px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+}
+

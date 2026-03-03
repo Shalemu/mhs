@@ -1,0 +1,403 @@
+
+/* =====================================================================
+   HERO
+===================================================================== */
+.sector-hero.logistics-hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 90px 6%;
+  color: #fff;
+  background:
+    linear-gradient(rgba(0,0,1,.75), rgba(0,0,1,.75)),
+    url("../../images/logistic/logistic\ \(1\).jpg") center / cover no-repeat;
+}
+
+.sector-hero.logistics-hero h1 {
+
+  /* font-family: "Montserrat", sans-serif; */
+  /* font-family: 'Bebas Neue', sans-serif; */
+  font-size: clamp(3.2rem, 4vw, 6.5rem);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  line-height: 1.05;
+  color: #fff;
+}
+
+.sector-hero.logistics-hero p {
+  font-size: clamp(1.2rem, 2.0vw, 1.8rem);
+  line-height: 1.2;
+}
+
+/* =====================================================================
+   INTRO
+===================================================================== */
+.sector-intro {
+  background: #f7f8fa;
+  padding: 100px 6%;
+  text-align: center;
+}
+
+.sector-intro h2 {
+   /* font-family: "Montserrat", sans-serif; */
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.intro-text {
+  font-size: 1.15rem;
+  color: #444;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.9;
+}
+
+/* =====================================================================
+   EXTENDED OVERVIEW & OPPORTUNITIES & INCENTIVES & COMPETITIVENESS
+===================================================================== */
+.sector-overview .overview-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 35px 80px rgba(0,0,0,0.08);
+  margin-bottom: 60px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.overview-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 50px 100px rgba(0,0,0,0.12);
+}
+
+.overview-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.overview-image img:hover {
+  transform: scale(1.05);
+}
+
+.overview-content {
+  padding: 70px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.overview-content .section-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #c8232a;
+  margin-bottom: 16px;
+}
+
+.overview-content h2 {
+  /* font-family: "Montserrat", sans-serif; */
+  font-size: 3rem;
+  color: #1b1b1b;
+  margin-bottom: 16px;
+}
+
+.overview-content .section-divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #c8232a, #ff5a5a);
+  margin: 24px 0 36px;
+  border-radius: 2px;
+}
+
+.check-list {
+  list-style: none;
+  margin-top: 12px;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.check-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #c8232a;
+  font-weight: 700;
+}
+
+/* =====================================================================
+   RESPONSIVE
+===================================================================== */
+@media (max-width: 1024px) {
+  .overview-card {
+    grid-template-columns: 1fr;
+  }
+  .overview-image {
+    height: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .overview-content {
+    padding: 50px 30px;
+  }
+  .sector-intro {
+    padding: 80px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .overview-content h2 {
+    font-size: 2.1rem;
+  }
+  .intro-text {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+}
+
+
+
+
+
+/* =============================== CTA =============================== */
+.cta-section {
+  background: #ffffff;
+  padding: 60px 6%;
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.cta-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.cta-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.cta-text {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 45px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cta-buttons a {
+  display: inline-block;
+  padding: 14px 34px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #e72429;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #c51e22;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #e72429;
+  border: 2px solid #e72429;
+}
+
+.btn-secondary:hover {
+  background: #e72429;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* =============================== RESPONSIVE =============================== */
+@media (max-width: 1024px) {
+  .intro-card {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .intro-content {
+    padding: 60px 40px;
+  }
+
+  .overview-wrapper,
+  .insights-wrapper,
+  .strategy-wrapper,
+  .cta-container {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-card {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-content {
+    padding: 50px 30px;
+    text-align: center;
+  }
+
+  .intro-image {
+    height: 300px;
+  }
+
+  .overview-wrapper,
+  .insights-wrapper,
+  .strategy-wrapper,
+  .cta-container {
+    padding: 0 25px;
+  }
+
+  .overview-wrapper h2,
+  .insights-wrapper h2,
+  .cta-title {
+    font-size: 2.3rem;
+  }
+
+  .strategy-lead,
+  .cta-text {
+    font-size: 16px;
+  }
+
+  .strategy-list li {
+    font-size: 15.5px;
+    padding-left: 26px;
+  }
+
+  .insights-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-content h2,
+  .overview-wrapper h2,
+  .insights-wrapper h2,
+  .cta-title {
+    font-size: 2rem;
+  }
+
+  .intro-card {
+    margin: 0 10px;
+  }
+
+  .insight-card h3 {
+    font-size: 16px;
+  }
+
+  .insight-card p {
+    font-size: 15px;
+  }
+}
+
+ /* Footer Styles */
+.footer {
+  background: #111;
+  color: #ddd;
+  padding: 60px 20px 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+.footer-col a {
+ color: #e72429;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color:  #e72429;
+}
+
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #fff;
+  background: #222;
+  padding: 8px 10px;
+  border-radius: 50%;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background: #e72429;
+  color: #111;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 40px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+}

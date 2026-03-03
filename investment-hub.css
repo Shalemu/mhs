@@ -1,0 +1,1012 @@
+
+/* ===============================
+   HERO SECTION
+   =============================== */
+
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 60px;
+
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("images/Homepage/1.jpg") center / cover no-repeat;
+
+  color: #ffffff;
+}
+
+/* HEADLINE */
+.hero h1 {
+ /* font-family: "Montserrat", sans-serif; */
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: clamp(2rem, 5vw, 6.5rem);
+  line-height: 1.1;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+/* SUBHEADLINE */
+.hero p {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.4rem, 2.0vw, 1.8rem);
+  line-height: 1.6;
+
+  max-width: 1200px;
+  margin: 0 auto 40px;
+
+  opacity: 0.95;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.hero .btn {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  padding: 16px 36px;
+  font-size: 1.0rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* PRIMARY */
+.hero .btn-primary {
+  background-color: #e63946;
+  color: #fff;
+}
+
+.hero .btn-primary:hover {
+  background-color: #c92f3b;
+  transform: translateY(-2px);
+}
+
+/* SECONDARY */
+.hero .btn-secondary {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.hero .btn-secondary:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   MOBILE
+   =============================== */
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 25px;
+    min-height: 80vh;
+  }
+
+  .hero .btn {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+  }
+}
+
+
+
+/* ================= INTRODUCTORY NARRATIVE ================= */
+/* ================= INTRO SPLIT ================= */
+.intro-split {
+  background: #ffffff; /* unified white background */
+  padding: 120px 0;
+}
+
+.intro-container {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  width: 100%;
+  min-height: 540px;
+  margin-top: -100px;
+}
+
+/* LEFT CONTENT */
+.intro-content {
+  background: #ffffff; /* changed from dark */
+  padding: 90px 70px;
+  color: #222;
+}
+
+.intro-eyebrow {
+  color: #e72429;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.intro-content h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin: 15px 0 10px;
+  text-transform: uppercase;
+  color: #111;
+}
+
+.intro-underline {
+  width: 60px;
+  height: 4px;
+  background: #e72429;
+  margin-bottom: 25px;
+}
+
+.intro-lead {
+  font-size: 17px;
+  line-height: 1.85;
+  color: #555;
+  margin-bottom: 22px;
+}
+
+.intro-content p {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #555;
+  margin-bottom: 22px;
+}
+
+/* RIGHT IMAGE */
+.intro-image {
+  position: relative;
+  overflow: hidden;
+  min-height: 540px;
+}
+
+.intro-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* SMOOTH FADE INTO CONTENT */
+.intro-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;  /* fade toward content */
+  width: 45%;
+  height: 100%;
+  pointer-events: none;
+
+  background: linear-gradient(
+    to left,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.6) 40%,
+    rgba(255,255,255,0.9) 70%,
+    #ffffff 100%
+  );
+}
+
+/* OPTIONAL: SMOOTH IMAGE ENTRANCE */
+.intro-image {
+  opacity: 0;
+  transform: translateX(40px);
+  animation: introFade 1.2s ease forwards;
+}
+
+@keyframes introFade {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .intro-container {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-content {
+    padding: 60px 40px;
+  }
+
+  .intro-image {
+    height: 380px;
+  }
+
+  .intro-content h2 {
+    font-size: 2.2rem;
+  }
+
+  /* stronger fade on small screens */
+  .intro-image::after {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-content {
+    padding: 50px 25px;
+  }
+}
+
+
+/* ================= WHY INVEST IN TANZANIA ================= */
+
+.why-invest-section {
+  background: #ffffff;
+  padding: 120px 0;
+  margin-top: -120px;
+}
+
+.why-invest-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
+  text-align: center;
+}
+
+.why-invest-eyebrow {
+  color: #e72429;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.why-invest-container h2 {
+ /* font-family: "Montserrat", sans-serif; */
+  font-size: 3rem;
+  margin: 18px 0 20px;
+  text-transform: uppercase;
+}
+
+.why-invest-intro {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  max-width: 820px;
+  margin: 0 auto 60px;
+}
+
+/* CARDS GRID */
+.why-invest-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+.why-invest-card {
+  background: #2f2f2f;
+  padding: 30px 26px;
+  text-decoration: none;
+  text-align: left;
+  color: #ffffff;
+  border-bottom: 4px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.why-invest-card i {
+  font-size: 28px;
+  color: #e72429;
+  margin-bottom: 14px;
+}
+
+.why-invest-card h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  line-height: 1.3;
+  color: #fff;
+}
+
+.why-invest-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #d0d0d0;
+}
+
+/* HOVER */
+.why-invest-card:hover {
+  transform: translateY(-6px);
+  border-bottom-color: #e72429;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+  .why-invest-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .why-invest-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .why-invest-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .why-invest-container h2 {
+    font-size: 2.2rem;
+  }
+}
+
+
+
+/* ================= INVESTMENT SECTORS ================= */
+.investment-sectors {
+  padding: 100px 0%;
+  background: #ffffff;
+ font-family: "Montserrat", sans-serif;
+}
+
+.investment-sectors .container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Section Header */
+.sectors-eyebrow {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #e72429;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  display: block;
+  margin-bottom: 10px;
+    margin-left: 80px;
+}
+
+.sectors-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 15px;
+  margin-left: 80px;
+}
+
+.sectors-intro {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #555;
+  max-width: 720px;
+  margin-bottom: 80px;
+    margin-left: 80px;
+}
+
+/* Sector Rows */
+.sectors-list {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.sector-row {
+  display: flex;
+  align-items: stretch;
+  background: #f8f9fb;
+  /* border-radius: 16px; */
+  overflow: hidden;
+  min-height: 340px;
+}
+
+.sector-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Image */
+.sector-image {
+  flex: 1;
+}
+
+.sector-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Content */
+.sector-content {
+  flex: 1;
+  padding: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+
+.sector-number {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #e72429;
+  letter-spacing: 1.5px;
+}
+
+/* Typography */
+.sector-content h3 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.sector-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  max-width: 440px;
+}
+
+/* Button */
+.btn-learn {
+  margin-top: 12px;
+  display: inline-block;
+  padding: 10px 26px;
+  background: #e72429;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  width: fit-content;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-learn:hover {
+  background: #c51e22;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .sector-row,
+  .sector-row.reverse {
+    flex-direction: column;
+  }
+
+  .sector-image {
+    height: 240px;
+  }
+
+  .sector-content {
+    padding: 35px 30px;
+  }
+
+  .sectors-title {
+    font-size: 2.3rem;
+  }
+}
+
+
+
+
+
+
+
+/* ================= INVESTMENT PROMOTION ================= */
+.different-section {
+  background: #111;
+  color: #fff;
+  padding: 110px 8%;
+  text-align: center;
+}
+
+.different-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Title */
+.different-section h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.different-section h2 span {
+  color: #e72429;
+}
+
+/* Intro */
+.different-intro {
+  font-size: 1.15rem;
+  margin-bottom: 70px;
+  color: #d0d0d0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+}
+
+/* Grid */
+.different-points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+  margin-bottom: 60px;
+  text-align: left;
+}
+
+/* Card */
+.different-point {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: #1a1a1a;
+  padding: 40px 24px;
+  border-radius: 14px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.different-point:hover {
+  transform: translateY(-6px);
+  background: #e72429;
+}
+
+/* Icon */
+.different-point i {
+  font-size: 28px;
+  color: #e72429;
+  min-width: 42px;
+  transition: color 0.3s ease;
+}
+
+.different-point:hover i {
+  color: #fff;
+}
+
+/* Text */
+.different-point p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+  color: #dcdcdc;
+}
+
+.different-point p strong {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+/* Button */
+.btn-explore {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 34px;
+  background: #e72429;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-explore:hover {
+  background: #c51e22;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .different-section {
+    padding: 90px 5%;
+  }
+}
+
+@media (max-width: 576px) {
+  .different-points {
+    grid-template-columns: 1fr;
+  }
+
+  .different-section h2 {
+    font-size: 2.2rem;
+  }
+
+  .different-intro {
+    font-size: 1.05rem;
+  }
+}
+
+
+/* ================= INVESTOR SUPPORT (LIGHT) ================= */
+.investor-support {
+  background: #ffffff;
+  padding: 110px 6%;
+}
+
+/* Layout */
+.investor-support-wrapper {
+  max-width: 1600px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Content */
+.investor-support-content {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+/* Eyebrow */
+.investor-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #e72429;
+}
+
+/* Title */
+.investor-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #111;
+}
+
+/* Intro */
+.investor-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  max-width: 650px;
+}
+
+/* Points */
+.investor-points {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-top: 10px;
+}
+
+.investor-point {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: #f9f9f9;
+  padding: 22px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.investor-point:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Icon */
+.investor-point i {
+  font-size: 22px;
+  color: #e72429;
+  min-width: 32px;
+}
+
+/* Text */
+.investor-point p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Image */
+.investor-support-image {
+  position: relative;
+  height: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+}
+
+.investor-support-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.investor-support-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .investor-support-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .investor-support-image {
+    height: 360px;
+  }
+
+  .investor-points {
+    grid-template-columns: 1fr;
+  }
+
+  .investor-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .investor-support {
+    padding: 80px 5%;
+  }
+
+  .investor-intro {
+    font-size: 1.05rem;
+  }
+}
+
+
+
+/* ================= CTA SECTION ================= */
+.cta-section {
+  background: #ffffff;
+  padding: 120px 6%;
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.cta-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Title */
+.cta-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+/* Text */
+.cta-text {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 45px;
+}
+
+/* Buttons */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cta-buttons a {
+  display: inline-block;
+  padding: 14px 34px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Primary */
+.btn-primary {
+  background: #e72429;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #c51e22;
+  transform: translateY(-2px);
+}
+
+/* Secondary */
+.btn-secondary {
+  background: transparent;
+  color: #e72429;
+  border: 2px solid #e72429;
+}
+
+.btn-secondary:hover {
+  background: #e72429;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-title {
+    font-size: 2.2rem;
+  }
+
+  .cta-text {
+    font-size: 1.05rem;
+  }
+}
+
+
+/* ================= INVESTOR GUIDE SECTION ================= */
+.investor-guide {
+  background: #ffffff;
+  padding: 120px 6%;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.investor-guide-container {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+}
+
+/* Content */
+.investor-guide-content {
+  max-width: 620px;
+}
+
+.investor-guide-content h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 12px;
+}
+
+.investor-guide-underline {
+  width: 70px;
+  height: 4px;
+  background: #e72429;
+  margin-bottom: 25px;
+}
+
+.investor-guide-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Button */
+.investor-guide-btn {
+  display: inline-block;
+  padding: 14px 34px;
+  background: #e72429;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.investor-guide-btn:hover {
+  background: #c51e22;
+  transform: translateY(-2px);
+}
+
+/* Icon Accent */
+.investor-guide-icon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 180px;
+  color: rgba(231, 36, 41, 0.06);
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .investor-guide-icon {
+    display: none;
+  }
+
+  .investor-guide-content {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .investor-guide-content h2 {
+    font-size: 2.2rem;
+  }
+}
+
+
+/* Footer Styles */
+.footer {
+  background: #111;
+  color: #ddd;
+  padding: 60px 20px 20px;
+ font-family: "Montserrat", sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+.footer-col a {
+ color: #e72429;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color:  #e72429;
+}
+
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #fff;
+  background: #222;
+  padding: 8px 10px;
+  border-radius: 50%;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background: #e72429;
+  color: #111;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 40px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+}

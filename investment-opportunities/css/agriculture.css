@@ -1,0 +1,1101 @@
+
+
+
+
+/* =====================================================================
+   SHARED UI ELEMENTS
+===================================================================== */
+.section-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--brand-red);
+  margin-bottom: 14px;
+}
+
+.section-divider {
+  width: 70px;
+  height: 4px;
+  background: var(--brand-red);
+  margin: 24px 0 40px;
+}
+
+/* =====================================================================
+   HERO
+===================================================================== */
+.sector-hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 6%;
+  text-align: center;
+  background:
+    linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+    url("../../images/agriculture/agriculture\ \(2\).jpg") center / cover no-repeat;
+  color: #ffffff;
+}
+
+/* .sector-hero-content {
+
+} */
+
+.sector-hero h1 {
+  
+ /* font-family: "Montserrat", sans-serif; */
+  /* font-family: 'Bebas Neue', sans-serif; */
+  font-size: clamp(3.2rem, 4vw, 6.5rem);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  line-height: 1.05;
+    max-width: 1400px;
+    color: #fff;
+}
+
+.sector-hero p {
+  font-size: clamp(1.2rem, 2.0vw, 1.9rem);
+  line-height: 1.2;
+  opacity: 0.95;
+    max-width: 1100px;
+}
+
+/* =====================================================================
+   SECTOR INTRO – PREMIUM
+===================================================================== */
+.sector-intro {
+  background: #f7f8fa; /* soft professional gray */
+  padding: 100px 6%;
+}
+
+.intro-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* LABEL */
+.sector-intro .section-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c8232a; /* refined red */
+  margin-bottom: 18px;
+}
+
+/* HEADING */
+.sector-intro h2 {
+  /* font-family: "Montserrat", sans-serif; */
+  font-size: 3.2rem;
+  line-height: 1.1;
+  color: #1b1b1b;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* DIVIDER */
+.sector-intro .section-divider {
+  width: 80px;
+  height: 4px;
+  background: #c8232a;
+  margin: 28px auto 42px;
+}
+
+/* TEXT */
+.intro-text {
+  font-size: 1.15rem;
+  line-height: 1.95;
+  color: #444;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+/* =====================================================================
+   RESPONSIVE
+===================================================================== */
+@media (max-width: 768px) {
+  .sector-intro {
+    padding: 80px 25px;
+  }
+
+  .sector-intro h2 {
+    font-size: 2.5rem;
+  }
+
+  .intro-text {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sector-intro h2 {
+    font-size: 2.2rem;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+}
+
+
+/* =====================================================================
+   EXTENDED OVERVIEW – PREMIUM CARD
+===================================================================== */
+.sector-overview {
+  padding: 100px 0%;
+  background: #ffffff;
+}
+
+.overview-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* CARD */
+.overview-card {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.08);
+}
+
+/* IMAGE */
+.overview-image {
+  width: 100%;
+  height: 100%;
+}
+
+.overview-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* CONTENT */
+.overview-content {
+  padding: 70px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* LABEL */
+.overview-content .section-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c8232a;
+  margin-bottom: 16px;
+}
+
+/* HEADING */
+.overview-content h2 {
+   /* font-family: "Montserrat", sans-serif; */
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #1b1b1b;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+/* DIVIDER */
+.overview-content .section-divider {
+  width: 80px;
+  height: 4px;
+  background: #c8232a;
+  margin: 26px 0 36px;
+}
+
+/* TEXT */
+.overview-content p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 22px;
+}
+
+/* LIST */
+.check-list {
+  list-style: none;
+  margin-top: 12px;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.check-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #c8232a;
+  font-weight: 700;
+}
+
+/* =====================================================================
+   RESPONSIVE
+===================================================================== */
+@media (max-width: 1024px) {
+  .overview-content {
+    padding: 60px 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .overview-card {
+    grid-template-columns: 1fr;
+  }
+
+  .overview-image {
+    height: 320px;
+  }
+
+  .overview-content {
+    padding: 50px 30px;
+  }
+
+  .overview-content h2 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .overview-content h2 {
+    font-size: 2.1rem;
+  }
+
+  .overview-content p {
+    font-size: 1rem;
+  }
+}
+
+/* =====================================================================
+   KEY STATS – PREMIUM DARK
+===================================================================== */
+.sector-stats {
+  background: linear-gradient(180deg, #f7f8fa 0%, #eef0f4 100%);
+  padding: 110px 6%;
+ /* font-family: "Montserrat", sans-serif; */
+  color: #1b1b1b;
+}
+
+.stats-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* LABEL */
+.sector-stats .section-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #c8232a;
+  margin-bottom: 14px;
+  display: inline-block;
+}
+
+/* HEADING (BEBAS ALLOWED HERE) */
+.sector-stats h2 {
+  /* font-family: "Montserrat", sans-serif; */
+  font-size: 3.1rem;
+  text-transform: uppercase;
+  color: #121212;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
+/* DIVIDER */
+.sector-stats .section-divider {
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(90deg, #c8232a, #ff4d4d);
+  margin: 26px auto 60px;
+  border-radius: 2px;
+}
+
+/* ================= GRID ================= */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+}
+
+/* ================= STAT CARD – SMOOTH & LOW PROFILE ================= */
+.stat-card {
+  position: relative;
+  background: linear-gradient(180deg, #1c1f26 0%, #14161c 100%);
+  padding: 30px 26px;
+  border-radius: 16px;
+  min-height: 130px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  overflow: hidden;
+}
+
+/* TOP ACCENT LINE */
+.stat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, #c8232a, #ff5a5a);
+  opacity: 0.9;
+}
+
+/* HOVER – VERY SMOOTH */
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 28px 65px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(200, 35, 42, 0.25);
+}
+
+/* ================= NUMBER ================= */
+.stat-card h3 {
+  /* font-family: "Montserrat", sans-serif; */
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+  letter-spacing: 0.4px;
+}
+
+/* TEXT-ONLY STAT */
+.stat-card h3.stat-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ================= DESCRIPTION ================= */
+.stat-card p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.55;
+  max-width: 92%;
+  text-align: center;
+}
+
+/* =====================================================================
+   RESPONSIVE
+===================================================================== */
+@media (max-width: 1024px) {
+  .sector-stats h2 {
+    font-size: 2.7rem;
+  }
+
+  .stat-card h3 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sector-stats {
+    padding: 90px 20px;
+  }
+
+  .stats-grid {
+    gap: 24px;
+  }
+
+  .stat-card {
+    padding: 36px 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sector-stats h2 {
+    font-size: 2.1rem;
+  }
+
+  .stat-card h3 {
+    font-size: 2.1rem;
+  }
+
+  .stat-card p {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+/* =====================================================================
+   INVESTMENT OPPORTUNITIES – PREMIUM LIST (NO CARDS)
+===================================================================== */
+.sector-opportunities {
+  background: #ffffff;
+  padding: 110px 6%;
+   /* font-family: "Montserrat", sans-serif; */
+  color: #1b1b1b;
+}
+
+.opportunities-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* LABEL */
+.sector-opportunities .section-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #c8232a;
+  margin-bottom: 14px;
+  display: inline-block;
+}
+
+/* HEADING */
+.sector-opportunities h2 {
+   /* font-family: "Montserrat", sans-serif; */
+  font-size: 3.1rem;
+  text-transform: uppercase;
+  color: #121212;
+  margin-bottom: 22px;
+  letter-spacing: 1px;
+}
+
+/* DIVIDER */
+.sector-opportunities .section-divider {
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(90deg, #c8232a, #ff4d4d);
+  margin-bottom: 70px;
+  border-radius: 2px;
+}
+
+/* GRID – CLEAN STACK */
+.opportunities-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 44px;
+}
+
+/* ROW (NOT A CARD) */
+.opportunity-card {
+  position: relative;
+  padding-left: 28px;
+}
+
+/* ACCENT LINE */
+.opportunity-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 4px;
+  height: calc(100% - 12px);
+  background: linear-gradient(180deg, #c8232a, #ff5a5a);
+  border-radius: 2px;
+}
+
+/* TITLE */
+.opportunity-card h3 {
+  /* font-family: "Montserrat", sans-serif; */
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: #121212;
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+/* DESCRIPTION */
+.opportunity-card p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  max-width: 820px;
+  margin: 0;
+}
+
+/* =====================================================================
+   RESPONSIVE
+===================================================================== */
+@media (max-width: 1024px) {
+  .sector-opportunities h2 {
+    font-size: 2.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sector-opportunities {
+    padding: 90px 20px;
+  }
+
+  .opportunity-card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sector-opportunities h2 {
+    font-size: 2.1rem;
+  }
+
+  .opportunity-card {
+    padding-left: 22px;
+  }
+
+  .opportunity-card p {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* =====================================================================
+   INCENTIVES – PREMIUM SPLIT LAYOUT
+===================================================================== */
+.sector-incentives {
+  background: linear-gradient(180deg, #ffffff 0%, #f6f7fa 100%);
+  padding: 120px 6%;
+  /* font-family: "Montserrat", sans-serif; */
+  color: #1b1b1b;
+}
+
+.incentives-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* LAYOUT */
+.incentives-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* LABEL */
+.sector-incentives .section-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #c8232a;
+  margin-bottom: 14px;
+  display: inline-block;
+}
+
+/* HEADING */
+.sector-incentives h2 {
+  /* font-family: "Montserrat", sans-serif; */
+  font-size: 3.1rem;
+  text-transform: uppercase;
+  color: #121212;
+  margin-bottom: 22px;
+  letter-spacing: 1px;
+}
+
+/* DIVIDER */
+.sector-incentives .section-divider {
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(90deg, #c8232a, #ff4d4d);
+  margin-bottom: 50px;
+  border-radius: 2px;
+}
+
+/* CHECK LIST */
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 36px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* CHECK ICON */
+.check-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #c8232a, #ff5a5a);
+  box-shadow: 0 6px 18px rgba(200, 35, 42, 0.35);
+}
+
+.check-list li::after {
+  content: "✓";
+  position: absolute;
+  left: 4px;
+  top: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* IMAGE BLOCK */
+.incentives-image {
+  height: 420px;
+  border-radius: 20px;
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("https://images.unsplash.com/photo-1600431521340-491eca880813");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.45);
+}
+
+/* =====================================================================
+   RESPONSIVE
+===================================================================== */
+@media (max-width: 1024px) {
+  .incentives-layout {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .incentives-image {
+    height: 380px;
+  }
+
+  .sector-incentives h2 {
+    font-size: 2.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sector-incentives {
+    padding: 90px 20px;
+  }
+
+  .incentives-image {
+    height: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sector-incentives h2 {
+    font-size: 2.1rem;
+  }
+
+  .check-list li {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* =====================================================================
+   SECTOR COMPETITIVENESS – IMAGE SPLIT LAYOUT
+===================================================================== */
+.sector-competitive {
+  background: linear-gradient(180deg, #f6f7fa 0%, #ffffff 100%);
+  padding: 120px 6%;
+   /* font-family: "Montserrat", sans-serif; */
+  color: #1b1b1b;
+}
+
+/* CONTAINER */
+.competitive-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 90px;
+  align-items: center;
+}
+
+/* ================= LEFT CONTENT ================= */
+.competitive-content {
+  max-width: 540px;
+}
+
+/* LABEL */
+.section-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #c8232a;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+/* HEADING */
+.sector-competitive h2 {
+ /* font-family: "Montserrat", sans-serif; */
+  font-size: 3.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #121212;
+  margin-bottom: 22px;
+}
+
+/* DIVIDER */
+.section-divider {
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(90deg, #c8232a, #ff4d4d);
+  margin-bottom: 55px;
+  border-radius: 2px;
+}
+
+/* ================= VALUE POINTS WITH ICON ================= */
+.competitive-points {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 26px;
+}
+
+.competitive-points div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* ICON BADGE */
+.competitive-points i {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #c8232a, #ff5a5a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.95rem;
+  box-shadow: 0 8px 22px rgba(200, 35, 42, 0.35);
+}
+
+
+/* ================= RIGHT IMAGE ================= */
+.competitive-image {
+  position: relative;
+  height: 540px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.18);
+}
+
+/* ACTUAL IMAGE */
+.competitive-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* OVERLAY */
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.05) 0%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+}
+
+/* =====================================================================
+   RESPONSIVE
+===================================================================== */
+@media (max-width: 1024px) {
+  .competitive-container {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .competitive-image {
+    height: 440px;
+  }
+
+  .sector-competitive h2 {
+    font-size: 2.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sector-competitive {
+    padding: 90px 22px;
+  }
+
+  .competitive-image {
+    height: 360px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sector-competitive h2 {
+    font-size: 2.2rem;
+  }
+
+  .competitive-points div {
+    font-size: 1rem;
+  }
+}
+
+/* =============================== CTA =============================== */
+.cta-section {
+  background: #ffffff;
+  padding: 60px 6%;
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.cta-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.cta-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.cta-text {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 45px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cta-buttons a {
+  display: inline-block;
+  padding: 14px 34px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #e72429;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #c51e22;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #e72429;
+  border: 2px solid #e72429;
+}
+
+.btn-secondary:hover {
+  background: #e72429;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* =============================== RESPONSIVE =============================== */
+@media (max-width: 1024px) {
+  .intro-card {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .intro-content {
+    padding: 60px 40px;
+  }
+
+  .overview-wrapper,
+  .insights-wrapper,
+  .strategy-wrapper,
+  .cta-container {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-card {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-content {
+    padding: 50px 30px;
+    text-align: center;
+  }
+
+  .intro-image {
+    height: 300px;
+  }
+
+  .overview-wrapper,
+  .insights-wrapper,
+  .strategy-wrapper,
+  .cta-container {
+    padding: 0 25px;
+  }
+
+  .overview-wrapper h2,
+  .insights-wrapper h2,
+  .cta-title {
+    font-size: 2.3rem;
+  }
+
+  .strategy-lead,
+  .cta-text {
+    font-size: 16px;
+  }
+
+  .strategy-list li {
+    font-size: 15.5px;
+    padding-left: 26px;
+  }
+
+  .insights-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-content h2,
+  .overview-wrapper h2,
+  .insights-wrapper h2,
+  .cta-title {
+    font-size: 2rem;
+  }
+
+  .intro-card {
+    margin: 0 10px;
+  }
+
+  .insight-card h3 {
+    font-size: 16px;
+  }
+
+  .insight-card p {
+    font-size: 15px;
+  }
+}
+
+  /* Footer Styles */
+.footer {
+  background: #111;
+  color: #ddd;
+  padding: 60px 20px 20px;
+ /* font-family: "Montserrat", sans-serif; */
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+.footer-col a {
+ color: #e72429;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color:  #e72429;
+}
+
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #fff;
+  background: #222;
+  padding: 8px 10px;
+  border-radius: 50%;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background: #e72429;
+  color: #111;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 40px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+}
